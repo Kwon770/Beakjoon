@@ -1,10 +1,19 @@
+// https://www.acmicpc.net/problem/15650
+// BACKTRACKING, 
+// NUMBER 15650
+
+// 중복을 제외한 모든 조합을 출력해야 하므로 원리를 이용한 재귀 함수를 이용하여 품
+// 1 2 3 4 5 -> (1) 2 3 4 5  > 1 (2) 3 4 5 > 1 2 (3) 4 5 >>
+//                  - - - -          - - -           - -
+
 #include<iostream>
 #include<vector>
 using namespace std;
 
-#define endl "\n"
+#define MAX 9
 
 int n, m;
+bool visited[MAX];
 vector<int> v;
 
 void PrintAll() {
