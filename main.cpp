@@ -14,15 +14,15 @@ void PrintAll() {
     cout << endl;
 }
 
-void loop(int cnt, int idx) {
+void loop(int cnt) {
     if (cnt == m) {
         PrintAll();
         return;
     }
 
-    for (int i = idx; i <= n; i++) {
+    for (int i = 1; i <= n; i++) {
         v.push_back(i);
-        loop(cnt + 1, i + 1);
+        loop(cnt + 1);
         v.pop_back();
     }
 }
@@ -33,6 +33,6 @@ int main() {
     cout.tie(NULL);
 
     cin >> n >> m;
-    loop(0, 1);
+    loop(0);
     return 0;
 }

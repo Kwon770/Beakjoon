@@ -1,38 +1,34 @@
-// https://www.acmicpc.net/problem/15649
+// https://www.acmicpc.net/problem/15650
 // BACKTRACKING, 
-// NUMBER 15649
-// 모든 조합을 출력해야 하므로 DFS 방식을 이용해서 풀이
+// NUMBER 15650
+
+// 중복을 포함한 모든 조합을 출력하므로 단순 재귀 함수를 사용하여 풀이함.
 
 #include<iostream>
 #include<vector>
 using namespace std;
 
-#define MAX 9
+#define endl "\n"
 
 int n, m;
-bool visited[MAX];
 vector<int> v;
 
 void PrintAll() {
     for (int i = 0; i < v.size(); i++) {
         cout << v[i] << " ";
     }
-    cout << "\n";
+    cout << endl;
 }
 
-void Dfs(int cnt) {
+void loop(int cnt) {
     if (cnt == m) {
         PrintAll();
         return;
     }
 
     for (int i = 1; i <= n; i++) {
-        if (visited[i]) continue;
-
-        visited[i] = true;
         v.push_back(i);
-        Dfs(cnt + 1);
-        visited[i] = false;
+        loop(cnt + 1);
         v.pop_back();
     }
 }
@@ -43,6 +39,6 @@ int main() {
     cout.tie(NULL);
 
     cin >> n >> m;
-    Dfs(0);
+    loop(0);
     return 0;
 }
