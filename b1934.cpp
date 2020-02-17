@@ -25,7 +25,7 @@ int lcm(int _a, int _b)
     return _a * _b / gcd(_a, _b);
 }
 
-int b1934()
+int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(NULL);

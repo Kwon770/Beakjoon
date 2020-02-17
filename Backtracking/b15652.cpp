@@ -1,8 +1,9 @@
-// https://www.acmicpc.net/problem/15650
-// BACKTRACKING (3),
-// NUMBER 15650
-
-// 중복을 포함한 모든 조합을 출력하므로 단순 재귀 함수를 사용하여 풀이함.
+// https://www.acmicpc.net/problem/15652
+// BACKTRACKING (4),
+// NUMBER 15652
+//
+// 중복을 포함하나 수열내에서 오름차순이여 하므로
+// 단순 재귀 함수에서 반복문 조건을 변경하여 풀이함.
 
 #include <iostream>
 #include <vector>
