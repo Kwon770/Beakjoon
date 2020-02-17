@@ -1,38 +1,45 @@
-#include<iostream>
-#include<vector>
+// https://www.acmicpc.net/problem/1934
+// NUMBER 1934 최소공배수
+//
+// 두 자연수 A,B의 최대공약수 G, 최소공배수 L이라 하면
+// A * B = L * G => L = A * B / G 를 활용
+
+#include <iostream>
 using namespace std;
 
 #define endl "\n"
 
-int n, m;
-vector<int> v;
-
-void PrintAll() {
-    for (int i = 0; i < v.size(); i++) {
-        cout << v[i] << " ";
+int gcd(int _a, int _b)
+{
+    while (_b != 0)
+    {
+        int r = _a % _b;
+        _a = _b;
+        _b = r;
     }
-    cout << endl;
+    return _a;
 }
 
-void loop(int cnt) {
-    if (cnt == m) {
-        PrintAll();
-        return;
-    }
-
-    for (int i = 1; i <= n; i++) {
-        v.push_back(i);
-        loop(cnt + 1);
-        v.pop_back();
-    }
+int lcm(int _a, int _b)
+{
+    return _a * _b / gcd(_a, _b);
 }
 
-int main() {
-    ios::sync_with_stdio(false); 
+int main()
+{
+    ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
 
-    cin >> n >> m;
-    loop(0);
+    int t, a, b;
+
+    cin >> t;
+    while (t)
+    {
+        cin >> a >> b;
+
+        cout << lcm(a, b) << endl;
+        t--;
+    }
     return 0;
 }

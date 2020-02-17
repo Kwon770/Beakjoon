@@ -1,18 +1,18 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-
-        {
-            "name": "(lldb) Launch Hello world",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/a.out",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": true,
-            "MIMode": "lldb"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "(lldb) Launch Hello world",
+      "type": "cppdbg",
+      "request": "launch",
+      "preLaunchTask": "build_g++",
+      "program": "${workspaceFolder}/a.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb"
+    }
+  ]
 }
