@@ -1,8 +1,11 @@
-//
+// https://www.acmicpc.net/problem/9663
 // BACKTRACKING (4),
-// NUMBER
+// NUMBER 9663
 
-// 중복을 포함한 모든 조합을 출력하므로 단순 재귀 함수를 사용하여 풀이함.
+// 각 퀸의 위치를 추가할때마다 나머지 퀸의 위치가 정해지므로 dfs 방식과 유사함
+// 퀸읜 상화좌우 대각선이 이동범위 이므로 문제의 조건을 지키기 위해선 이 위치들을 계산 가능해야힘
+// 퀸의 좌우 모든 곳은 불가능한 곳이므로 계산할 가치가 없음 => 한 줄씩 Row 계산
+// 대각선은 퀸의 위치와 현재 위치 (row, column) 기울기 = 1 이면 대각선
 
 #include <iostream>
 #include <cmath>
@@ -17,12 +20,10 @@ bool isPossible(int c)
 {
     for (int i = 1; i < c; i++)
     {
-        // 같은 행, 열
         if (queenRow[i] == queenRow[c])
         {
             return false;
         }
-        // 대각선
         if (abs(queenRow[i] - queenRow[c]) == abs(i - c))
         {
             return false;
@@ -62,7 +63,6 @@ void loop()
         for (int o = 0; o < 15; o++)
             queenRow[o] = 0;
         queenRow[1] = i;
-        // 정점은 행을 기준. (i = 1) => 1행(1열), (i = 2) => 2행(1열), (i = 3) => 3행(1열)
         dfs(1);
     }
 }
