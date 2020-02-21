@@ -1,10 +1,12 @@
 //
-// Math3 (1)
+// Math3 (2)
 // NUMBER
 
 //
 
 #include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 #define endl "\n"
