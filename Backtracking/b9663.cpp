@@ -1,5 +1,5 @@
 // https://www.acmicpc.net/problem/9663
-// BACKTRACKING (4),
+// BACKTRACKING (5),
 // NUMBER 9663
 
 // 각 퀸의 위치를 추가할때마다 나머지 퀸의 위치가 정해지므로 dfs 방식과 유사함
