@@ -1,12 +1,10 @@
 //
-// Math3 (2)
+// Math3 (3) 소인수분해
 // NUMBER
 
 //
 
 #include <iostream>
-#include <vector>
-#include <algorithm>
 using namespace std;
 
 #define endl "\n"
