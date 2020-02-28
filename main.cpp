@@ -1,6 +1,6 @@
-// https://www.acmicpc.net/problem/2580
-// Backtracking (6) 스도쿠
-// NUMBER
+// https://www.acmicpc.net/problem/11050
+// Math3 (7) 이항 계수
+// NUMBER 11050
 
 //
 
