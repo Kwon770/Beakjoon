@@ -8,6 +8,11 @@
         "string_view": "cpp",
         "vector": "cpp",
         "new": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "__split_buffer": "cpp",
+        "algorithm": "cpp",
+        "chrono": "cpp",
+        "limits": "cpp",
+        "ratio": "cpp"
     }
 }

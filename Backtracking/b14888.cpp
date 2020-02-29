@@ -1,8 +1,11 @@
-// https://www.acmicpc.net/problem/15649
-// BACKTRACKING (1),
-// NUMBER 15649
-//
-// 모든 조합을 출력해야 하므로 DFS 방식을 이용해서 풀이
+// https://www.acmicpc.net/problem/14888
+// BACKTRACKING (7), 연산자 끼워넣기
+// NUMBER 14888
+
+// 모든 경우의 수를 구해서 값을 구해야하므로 DFS 를 통해 품
+
+// 주어지는 연산자는 정수로 입력받아 배열에 저장하고
+// 연산자 배열을 DFS 하여 정렬된 연산자를 이용하여 값을 계산함
 
 #include <iostream>
 #include <vector>
