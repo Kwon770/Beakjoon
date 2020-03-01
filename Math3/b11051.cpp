@@ -1,31 +1,45 @@
 // https://www.acmicpc.net/problem/11050
-// Math3 (7) 이항 계수
+// Math3 (8) 이항 계수
 // NUMBER 11050
 
-//
+// 동적계획법을 통한 풀이를 위해, 이항 계수의 성질을 이용하여 풀이
+// (1) (N, K) = (N, N-K)
+// (2) (N, K) = (N - 1, K) + (N - 1, K - 1)
+// (3) (N, N) = (N, 0) = 1
+// (4) (N, 1) = N
+
+// 재귀를 통한 동적계획법 풀이는 재귀 과정애서 중복되는 연산이 많아 성능 저하를 불러 일으키므로,
+// 연산 결과를 저장하여 이항 계수를 푸는 방식을 적용
+
+// 이항 계수를 구하는 과정에서 오버플로우를 방지하기 위해 모듈러 연산을 적용
+// 문제가 요구하는 출력은 이항계수에서 10007를 나눈 나머지이므로, 구하는 과정에서 나머지를 이용하여 구함
+// (a + b) % c = (a % c + b % c)
 
 #include <iostream>
 using namespace std;
 
 #define endl "\n"
+#define MAX 1001
+#define DIVIDE 10007
+int arr[MAX][MAX];
 
 int Solve(int n, int k)
 {
-    int arr[n + 1][k + 1];
     for (int i = 0; i <= n; i++)
-        arr[i][0] = 1;
-    for (int i = 0; i <= k; i++)
-        arr[i][i] = 1;
-
-    for (int i = 1; i <= n; i++)
     {
-        for (int o = 1; o <= k; o++)
+        arr[i][0] = arr[i][i] = 1;
+        arr[i][1] = i;
+    }
+
+    for (int i = 3; i <= n; i++)
+    {
+        for (int o = 2; o <= k; o++)
         {
-            arr[i][o] = arr[i - 1][o] + arr[i - 1][o - 1];
+            arr[i][o] = (arr[i - 1][o] + arr[i - 1][o - 1]) % DIVIDE;
         }
     }
 
-    return arr[n][k];
+    return arr[n][k] % DIVIDE;
 }
 
 int main()
@@ -36,7 +50,7 @@ int main()
 
     int n, k;
     cin >> n >> k;
-    cout << Solve(n, k) % 10007 << endl;
+    cout << Solve(n, k) << endl;
 
     return 0;
 }
