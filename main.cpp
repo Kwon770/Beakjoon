@@ -1,6 +1,6 @@
-// https://www.acmicpc.net/problem/
-//
-// NUMBER
+// https://www.acmicpc.net/problem/2748
+// Dynamic Programming (1), 피보나치 수 2
+// NUMBER 2748
 
 #include <iostream>
 
