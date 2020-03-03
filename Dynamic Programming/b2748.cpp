@@ -2,6 +2,8 @@
 // Dynamic Programming (1), 피보나치 수 2
 // NUMBER 2748
 
+// 동적계획법 https://www.notion.so/sckwon770/Dynamic-Programming-0bca6ee333b14aea913f74133a868b0c
+
 // 피보나치 수의 성질을 이용하며,
 // 단순 재귀는 중복 연산으로 인한 성능저하때문에 값을 저장하며 동적계획법을 이용하며
 

@@ -1,7 +1,9 @@
 // https://www.acmicpc.net/problem/15649
 // BACKTRACKING (1),
 // NUMBER 15649
-//
+
+// Backtracking https://www.notion.so/sckwon770/Backtracking-30cf0d78cc6b4477afac6444df505216
+
 // 모든 조합을 출력해야 하므로 DFS 방식을 이용해서 풀이
 
 #include <iostream>

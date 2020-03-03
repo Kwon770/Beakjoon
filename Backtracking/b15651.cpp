@@ -1,7 +1,9 @@
 // https://www.acmicpc.net/problem/15650
 // BACKTRACKING (3),
 // NUMBER 15650
-//
+
+// Backtracking https://www.notion.so/sckwon770/Backtracking-30cf0d78cc6b4477afac6444df505216
+
 // 중복을 포함한 모든 조합을 출력하므로 단순 재귀 함수를 사용하여 풀이함.
 
 #include <iostream>

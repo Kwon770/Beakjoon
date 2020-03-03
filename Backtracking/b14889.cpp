@@ -2,6 +2,8 @@
 // BACKTRACKING (8), 스타트와 링크
 // NUMBER 14889
 
+// Backtracking https://www.notion.so/sckwon770/Backtracking-30cf0d78cc6b4477afac6444df505216
+
 // 1 ~ N 번의 사람들의 두 팀으로 나눈 후, 2차원 배열로 주어진 능력치를 모두 더하여 나눈 경우의 수마다의 팀간 격차 최소값을 구하여 풀이
 // 1 ~ N 연속된 숫자의 사람들을 두 팀으로 나누고 모든 경우의 수를 확인해야 하므로, DFS 를 통해 모든 경우를 조사
 

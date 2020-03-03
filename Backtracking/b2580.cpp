@@ -2,6 +2,8 @@
 // Backtracking (6) 스도쿠
 // NUMBER 2580
 
+// Backtracking https://www.notion.so/sckwon770/Backtracking-30cf0d78cc6b4477afac6444df505216
+
 // 스도쿠의 규칙 상하좌우줄 그리고 3x3 사각형안에 모든 경우에서 1~9 의 숫자가 겹치면 안된다는 것을
 // 백트랙킹으로 검사하여 구하면 됨.
 

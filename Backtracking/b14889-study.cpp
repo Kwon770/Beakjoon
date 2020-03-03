@@ -2,6 +2,8 @@
 // BACKTRACKING (8), 스타트와 링크
 // NUMBER 14889
 
+// Backtracking https://www.notion.so/sckwon770/Backtracking-30cf0d78cc6b4477afac6444df505216
+
 // 선수들을 팀에 나눈 결과르 문자열에 bit (0과 1)을 통해 저장함
 // bit string은 매개변수로 전달함으로써, Dfs 마지막 단계에서 요소 제거를 해결할 수 있음
 // 조합치 계산 과정애서 각 팀의 반복문을 톤해 계산함 ( 1 : start 팀 0 : link 팀)

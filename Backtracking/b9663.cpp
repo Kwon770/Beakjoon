@@ -1,6 +1,8 @@
 // https://www.acmicpc.net/problem/9663
-// BACKTRACKING (5),
+// BACKTRACKING (5), NQueen
 // NUMBER 9663
+
+// Backtracking https://www.notion.so/sckwon770/Backtracking-30cf0d78cc6b4477afac6444df505216
 
 // 각 퀸의 위치를 추가할때마다 나머지 퀸의 위치가 정해지므로 dfs 방식과 유사함
 // 퀸읜 상화좌우 대각선이 이동범위 이므로 문제의 조건을 지키기 위해선 이 위치들을 계산 가능해야힘

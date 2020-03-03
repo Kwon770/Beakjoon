@@ -2,6 +2,9 @@
 // Math3 (8) 이항 계수
 // NUMBER 11050
 
+// 이항 계수 https://www.notion.so/sckwon770/c6476b1b276b4a8f86ad58caaff72181
+// 동적 계획법  https://www.notion.so/sckwon770/Dynamic-Programming-0bca6ee333b14aea913f74133a868b0c
+
 // 동적계획법을 통한 풀이를 위해, 이항 계수의 성질을 이용하여 풀이
 // (1) (N, K) = (N, N-K)
 // (2) (N, K) = (N - 1, K) + (N - 1, K - 1)

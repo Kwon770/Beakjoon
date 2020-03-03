@@ -6,6 +6,7 @@
 
 using namespace std;
 #define endl "\n"
+#define MAX 41
 
 int main()
 {

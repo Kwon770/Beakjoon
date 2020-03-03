@@ -1,3 +1,9 @@
+// https://www.acmicpc.net/problem/14888
+// BACKTRACKING (7), 연산자 끼워넣기
+// NUMBER 14888
+
+// Backtracking https://www.notion.so/sckwon770/Backtracking-30cf0d78cc6b4477afac6444df505216
+
 // 연산자를 배열에 넣고, 배열의 모든 경우의 수를 구하기 위해 DFS 사용하는 것이 아닌,
 // DFS 를 통한 재귀 자체의 성질을 이용하여 품
 

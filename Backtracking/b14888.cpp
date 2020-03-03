@@ -2,6 +2,8 @@
 // BACKTRACKING (7), 연산자 끼워넣기
 // NUMBER 14888
 
+// Backtracking https://www.notion.so/sckwon770/Backtracking-30cf0d78cc6b4477afac6444df505216
+
 // 모든 경우의 수를 구해서 값을 구해야하므로 DFS 를 통해 품
 
 // 주어지는 연산자는 정수로 입력받아 배열에 저장하고

@@ -2,6 +2,8 @@
 // BACKTRACKING (2),
 // NUMBER 15650
 
+// Backtracking https://www.notion.so/sckwon770/Backtracking-30cf0d78cc6b4477afac6444df505216
+
 // 중복을 제외한 모든 조합을 출력해야 하므로 원리를 이용한 재귀 함수를 이용하여 품
 // 1 2 3 4 5 -> (1) 2 3 4 5  > 1 (2) 3 4 5 > 1 2 (3) 4 5 >>
 //                  - - - -          - - -           - -

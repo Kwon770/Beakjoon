@@ -1,7 +1,9 @@
 // https://www.acmicpc.net/problem/15652
 // BACKTRACKING (4),
 // NUMBER 15652
-//
+
+// Backtracking https://www.notion.so/sckwon770/Backtracking-30cf0d78cc6b4477afac6444df505216
+
 // 중복을 포함하나 수열내에서 오름차순이여 하므로
 // 단순 재귀 함수에서 반복문 조건을 변경하여 풀이함.
 
