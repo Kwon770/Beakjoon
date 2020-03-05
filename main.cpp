@@ -1,12 +1,11 @@
-// https://www.acmicpc.net/problem/2748
-// Dynamic Programming (1), 피보나치 수 2
-// NUMBER 2748
+// https://www.acmicpc.net/problem/1904
+// Dynamic Programming (3), 01타일
+// NUMBER
 
 #include <iostream>
 
 using namespace std;
 #define endl "\n"
-#define MAX 41
 
 int main()
 {
