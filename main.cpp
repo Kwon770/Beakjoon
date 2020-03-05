@@ -1,11 +1,14 @@
-// https://www.acmicpc.net/problem/1904
-// Dynamic Programming (3), 01타일
-// NUMBER
+// https://www.acmicpc.net/problem/9461
+// Dynamic Programming (4), 파도반 수열
+// NUMBER 9461
 
 #include <iostream>
 
 using namespace std;
-#define endl "\n"
+
+void Solve()
+{
+}
 
 int main()
 {
