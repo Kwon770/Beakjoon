@@ -1,14 +1,10 @@
-// https://www.acmicpc.net/problem/1932
-// Dynamic Programming (6), 정수 삼각형
-// NUMBER 1932
+// https://www.acmicpc.net/problem/2579
+// Dynamic Programming (7), 계단오르기
+// NUMBER 2579
 
 #include <iostream>
 
 using namespace std;
-
-void Solve(int N)
-{
-}
 
 int main()
 {
