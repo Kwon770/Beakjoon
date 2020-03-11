@@ -20,6 +20,7 @@ int Solve()
             total += arr[N - 2 < 0 ? 0 : N - 2];
             N -= 2;
         }
+
         else
         {
             total += arr[N - 2];

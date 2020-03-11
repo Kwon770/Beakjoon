@@ -1,10 +1,14 @@
-// https://www.acmicpc.net/problem/2579
-// Dynamic Programming (7), 계단오르기
-// NUMBER 2579
+// https://www.acmicpc.net/problem/10844
+// Dynamic Programming (9), 쉬운 계단 수
+// NUMBER 10844
 
 #include <iostream>
 
 using namespace std;
+
+void Solve(int n)
+{
+}
 
 int main()
 {
