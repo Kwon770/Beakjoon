@@ -13,6 +13,8 @@
 // (N - 1 계단수) + (N 의 마지막 수) 가 되기 위핵선 (N - 1 계단수) 의 마지막 숫자가 조건에 만족하면 됨
 // value[N][P] = value[N - 1][P - 1] + value[N - 1][P + 1]
 
+// 오버플로우를 방지하기 위해 모듈러의 연산을 사용
+
 #include <iostream>
 
 using namespace std;
