@@ -22,7 +22,10 @@ int Solve()
     value[1] = arr[0] + arr[1];
     value[2] = max(arr[0] + arr[2], arr[1] + arr[2]);
     for (int i = 3; i < N; i++)
+    {
         value[i] = max(arr[i] + value[i - 2], arr[i] + arr[i - 1] + value[i - 3]);
+        value[i] = max(value[i], value[i - 3] + input[i]);
+    }
 
     return value[N - 1];
 }
