@@ -13,14 +13,13 @@ int Solve()
     int total = arr[N];
     while (N > 0)
     {
-        if (arr[N - 1] > arr[N - 2])
+        if (arr[N - 1] > arr[N - 2 < 0 ? 0 : N - 2])
         {
             total += arr[N - 1];
             N -= 1;
             total += arr[N - 2 < 0 ? 0 : N - 2];
             N -= 2;
         }
-
         else
         {
             total += arr[N - 2];
