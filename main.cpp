@@ -1,43 +1,46 @@
-// https://www.acmicpc.net/problem/11054
-// Dynamic Programming (12), 가장 긴 바이토닉 부분 수열
-// NUMBER 11054
+// https://www.acmicpc.net/problem/2565
+// Dynamic Programming (13), 전깃줄
+// NUMBER 2565
 
-// 11053, 가장 긴 증가하는 부분 수열과 접근 방식은 거의 유사함
-// 바이토닉 수열은 증가하는 수열과 감소하는 수열이므로, 수열의 각 숫자의 증가하는 수열과 감소하는 수열의 값을 구하고
-// 수열의 각 숫자가 가진 값을 더하였을 경우 최대값을 구하면 가장 긴 바이토닉 부분 수열의 길이임
-
-// 단, 수열의 길이 값은 본인까지 포함임으로, 최종 길이를 출력할대 -1 해야함
+// 이 문제는 2개의 핵심점을 파악해야 dp로 풀 수 있는데,
+// 1. 합선이 되는 경우는, 선(a, b) 선(q,w) 이 있을때
+//    (1) a < q && b > w
+//    (2) a > q && b < w
+// 2. 결국 합선아 되지 않기 위해서는 A 전봇대를 기준으로 했을때 B 전봇대를 향하는 전선이 내림차순 혹은 오름차순이여야 함
+// 따라서 B를 향한 전선이 오름차순인 경우를 찾고,
+// 최소로 선을 제거한 갯수를 구해야 하므로 가장 긴 증가하는 부분 수열을 구하면 됨
 
 #include <iostream>
 
 using namespace std;
-#define MAX 1001
-int input[MAX], up[MAX], down[MAX];
+#define MAX 501
+int wire[MAX], lis[MAX], n, maxLen = 0;
 
-void Solve(int n)
+void Solve()
 {
-    for (int i = 1; i <= n; i++)
+    int cnt = 0;
+    for (int i = 1; i < MAX; i++)
     {
+        if (!wire[i])
+            continue;
+
         for (int o = 1; o < i; o++)
         {
-            if (input[o] < input[i])
-                up[i] = max(up[i], up[o] + 1);
-        }
-    }
+            if (!wire[o])
+                continue;
 
-    for (int i = n; i > 0; i--)
-    {
-        for (int o = n; o > i; o--)
-        {
-            if (input[o] < input[i])
-                down[i] = max(down[i], down[o] + 1);
+            if (wire[o] < wire[i])
+            {
+                lis[i] = max(lis[i], lis[o] + 1);
+            }
+            maxLen = max(maxLen, lis[i]);
         }
-    }
 
-    int maxVal = 0;
-    for (int i = 1; i <= n; i++)
-        maxVal = maxVal > up[i] + down[i] ? maxVal : up[i] + down[i];
-    cout << maxVal - 1 << endl;
+        cnt++;
+        if (cnt == n)
+            break;
+    }
+    cout << n - maxLen << endl;
 }
 
 int main()
@@ -46,14 +49,15 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
 
-    int N;
-    cin >> N;
-    for (int i = 1; i <= N; i++)
-        cin >> input[i];
-
-    fill_n(up, N + 1, 1);
-    fill_n(down, N + 1, 1);
-    Solve(N);
+    cin >> n;
+    int a, b;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a >> b;
+        wire[a] = b;
+    }
+    fill_n(lis, MAX, 1);
+    Solve();
 
     return 0;
 }
