@@ -1,12 +1,11 @@
-// https://www.acmicpc.net/problem/9251
-// Dynamic Programming (14), LCS
-// NUMBER 9251
-
-// Study Note, https://www.notion.so/sckwon770/9251-LCS-c39aefd27cc343cda29f94a4b1c90799
+// https://www.acmicpc.net/problem/1912
+// Dynamic Programming (15), 연속합
+// NUMBER 1912
 
 #include <iostream>
 
 using namespace std;
+#define MAX 100000
 
 int main()
 {
@@ -14,20 +13,20 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
 
-    int dp[1001][1001], i, o;
-    string s1, s2;
-    cin >> s1 >> s2;
-    for (i = 1; i <= s1.length(); i++)
+    int n, arr[MAX], dp[MAX], maxVal = -1001;
+    cin >> n;
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+
+    dp[0] = arr[0];
+    maxVal = max(maxVal, dp[0]);
+    for (int i = 1; i < n; i++)
     {
-        for (o = 1; o <= s2.length(); o++)
-        {
-            if (s1[i - 1] == s2[o - 1])
-                dp[i][o] = dp[i - 1][o - 1] + 1;
-            else
-                dp[i][o] = max(dp[i - 1][o], dp[i][o - 1]);
-        }
+        dp[i] = max(dp[i - 1] + arr[i], arr[i]);
+        maxVal = max(maxVal, dp[i]);
     }
-    cout << dp[i - 1][o - 1] << endl;
+
+    cout << maxVal << endl;
 
     return 0;
 }
