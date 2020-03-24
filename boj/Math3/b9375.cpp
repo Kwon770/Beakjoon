@@ -1,6 +1,9 @@
-// https://www.acmicpc.net/problem/1912
-// Dynamic Programming (15), 연속합
-// NUMBER 1912
+// https://www.acmicpc.net/problem/9375
+// Math3(9), 연속합
+// NUMBER 9375
+
+// 다른 특별한 수학적 계산이나 기술없이 패턴을 통한 공식화가 핵심
+// (종류 당 의상 개수 + 1) * (종류 당 의상 개수 + 1) * ... * (종류 당 의상 개수 + 1) - 1
 
 #include <iostream>
 #include <vector>
@@ -10,15 +13,12 @@ using namespace std;
 
 void solve(int n)
 {
-    vector<string> vec;
     string wear, kind;
+    vector<string> vec;
     int kinds[30];
-    fill(kinds, kinds + 30, 0);
-    for (int i = 0; i < 30; i++)
-    {
-        cout << kinds[i] << endl;
-    }
 
+    vec.clear();
+    fill(kinds, kinds + 30, 0);
     for (int i = 0; i < n; i++)
     {
         cin >> wear >> kind;
@@ -34,9 +34,9 @@ void solve(int n)
         }
     }
 
-    int calculation = (kinds[0] + 1);
-    for (int i = 1; kinds[i]; i++)
-        calculation *= (kinds[i] + 1);
+    int calculation = 1;
+    for (int i = 0; kinds[i]; i++)
+        calculation = calculation * (kinds[i] + 1);
     cout << calculation - 1 << endl;
 }
 
