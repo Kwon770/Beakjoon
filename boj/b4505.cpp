@@ -1,6 +1,7 @@
-// https://www.acmicpc.net/problem/12865
-//
-// NUMBER
+// https://www.acmicpc.net/problem/4504
+// NUMBER 4504
+
+// EASY
 
 #include <iostream>
 using namespace std;
