@@ -1,6 +1,8 @@
 // https://www.acmicpc.net/problem/12865
-//
-// NUMBER
+// Dynamic Programming (16), 평범한 배낭
+// NUMBER 12865
+
+// 노션 정리본 https://www.notion.so/sckwon770/12865-1b447fa265ce4dc89dabd8e9a79f8000
 
 #include <iostream>
 #include <vector>
@@ -8,14 +10,14 @@
 
 using namespace std;
 int bag[101][100001];
-vector<pair<int, int>> item;
+vector<pair<int, int> > item;
 
 void solve(int N, int K)
 {
     for (int i = 0; i < N; i++)
         for (int o = 0; o <= K; o++)
             bag[i][o] = 0;
-
+    
     for (int i = 0; i < N; i++)
     {
         for (int o = 0; o <= K; o++)
