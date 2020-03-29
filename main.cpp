@@ -1,9 +1,10 @@
-// https://www.acmicpc.net/problem/11399
-// Greedy Algorithm(3), ATM
-// NUMBER 11399
+// https://www.acmicpc.net/problem/1541
+// Greedy Algorithm(4), 잃어버린 괄호
+// NUMBER 1541
 
 #include <iostream>
 using namespace std;
+#define endl '\n'
 
 int main()
 {
