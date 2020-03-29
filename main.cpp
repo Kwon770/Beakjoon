@@ -1,6 +1,6 @@
-// https://www.acmicpc.net/problem/1931
-// Greedy Algorithm(2), 화의실배정
-// NUMBER 1931
+// https://www.acmicpc.net/problem/11399
+// Greedy Algorithm(3), ATM
+// NUMBER 11399
 
 #include <iostream>
 using namespace std;
