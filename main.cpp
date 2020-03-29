@@ -1,6 +1,6 @@
-// https://www.acmicpc.net/problem/11047
-// Greedy Algorithm(1), 동전 0
-// NUMBER 11047
+// https://www.acmicpc.net/problem/1931
+// Greedy Algorithm(2), 화의실배정
+// NUMBER 1931
 
 #include <iostream>
 using namespace std;
@@ -11,5 +11,5 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
 
-        return 0;
+    return 0;
 }
