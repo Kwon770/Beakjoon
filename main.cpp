@@ -1,6 +1,6 @@
-// https://www.acmicpc.net/problem/10828
-// Stack(1), 스택
-// NUMBER 10828
+// https://www.acmicpc.net/problem/10773
+// Stack(2), 제로
+// NUMBER 10773
 
 #include <iostream>
 using namespace std;
