@@ -1,6 +1,6 @@
-// https://www.acmicpc.net/problem/2164
-// Queue_Deque_(2), 카드 2
-// NUMBER 2164
+// https://www.acmicpc.net/problem/11866
+// Queue_Deque_(3), 요세푸스 문제 0
+// NUMBER 11866
 
 // Queue/Dequq 를 이용하여 주어진 문제의 흐름대로 조작하는 문제
 // erase 할때마다 인덱스가 한 칸씩 앞으로 당겨지므로 k 만큼 인덱스를 옮길때 조심하여야 함
