@@ -1,6 +1,11 @@
-// https://www.acmicpc.net/problem/2164
-// Queue_Deque_(2), 카드 2
-// NUMBER 2164
+// https://www.acmicpc.net/problem/1966
+// Queue_Deque_(4), 프린터큐
+// NUMBER 1966
+
+// 문제에서 주어진 프린트터의 흐름대로 큐를 조작함.
+// 중요도를 확인하는 루프설계를 조심해야함 => 출력할 내용이 단순한 계산을 통해 얻는 값이 아니므로
+// 루프과정내에서 출력 순서와 m의 인덱스를 계산해줘야됨.
+// dequq 초기화 잊지말기
 
 #include <iostream>
 #include <deque>
