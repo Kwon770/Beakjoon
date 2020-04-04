@@ -13,22 +13,36 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
     deque<int> deque;
-    int n, k;
-    cin >> n >> k;
-    k--;
-    int idx = k;
-    for (int i = 1; i <= n; i++)
-        deque.push_back(i);
-    cout << "<";
-    while (deque.size() != 1)
+    int t, n, m, temp;
+    cin >> t;
+    for (int i = 0; i < t; i++)
     {
-        cout << deque[idx] << ", ";
-        deque.erase(deque.begin() + idx);
-        n--;
-        idx += k;
-        if (idx >= n)
-            idx %= n;
+        cin >> n >> m;
+        for (int o = 0; o < n; o++)
+        {
+            cin >> temp;
+            deque.push_back(temp);
+        }
+        while (true)
+        {
+            bool redo = false;
+            for (int o = 1; o < deque.size(); o++)
+                if (deque.front < deque[o])
+                {
+                    redo = true;
+                    break;
+                }
+            if (redo)
+            {
+                deque.push_back(deque.front());
+                deque.pop_front();
+            }
+            else
+            {
+                deque.pop_front();
+            }
+        }
     }
-    cout << deque[0] << ">" << endl;
+
     return 0;
 }
