@@ -62,6 +62,7 @@
         "typeinfo": "cpp",
         "unordered_map": "cpp",
         "deque": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "queue": "cpp"
     }
 }

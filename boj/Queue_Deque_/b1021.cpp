@@ -2,6 +2,9 @@
 // Queue_Deque_(6), 회전하는 큐
 // NUMBER 1021
 
+// 규칙에 따라 정해진 연산을 사용하여 시물레이션 하면 됨
+// 뽑아낼 원소를 왼쪽을 빼내는 것과 오른쪽으로 뺴내는 것 중 어느 것이 최소연산인지 비교
+
 #include <iostream>
 #include <deque>
 #include <algorithm>
