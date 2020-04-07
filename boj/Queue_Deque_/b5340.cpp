@@ -2,6 +2,8 @@
 // Queue_Deque_(7), AC
 // NUMBER 5340
 
+// 노션 풀이, https://www.notion.so/sckwon770/5340-AC-a2fdc5f316a44c46b74bd761c7ba35e8
+
 #include <iostream>
 #include <deque>
 #include <string>
