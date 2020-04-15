@@ -6,6 +6,39 @@
 #include <vector>
 using namespace std;
 #define endl "\n"
+#define MOD 1000
+vector<vector<long long>> Temp(6, vector<long long>(6, 0));
+int n;
+
+void matrix(vector<vector<long long>> &A, vector<vector<long long>> &B)
+{
+    for (int i = 1; i <= n; i++)
+        for (int o = 1; o <= n; o++)
+            for (int p = 1; p <= n; p++)
+            {
+                Temp[i][o] += A[i][p] * B[p][o] % MOD;
+            }
+
+    for (int i = 1; i <= n; i++)
+        for (int o = 1; o <= n; o++)
+        {
+            A[i][o] = Temp[i][o] % MOD;
+            Temp[i][o] = 0;
+        }
+}
+
+void divide(long long _b, vector<vector<long long>> &Result, vector<vector<long long>> &Origin)
+{
+    if (_b == 1)
+        return;
+    else
+    {
+        divide(_b / 2, Result, Origin);
+        matrix(Result, Result);
+        if (_b % 2)
+            matrix(Result, Origin);
+    }
+}
 
 int main()
 {
