@@ -1,6 +1,6 @@
-// https://www.acmicpc.net/problem/
-// Divide_and_conquer(8),
-// NUMBER
+// https://www.acmicpc.net/problem/6549
+// Divide_and_conquer(9), 히스토그램에서 가장 큰 직사각형
+// NUMBER 6549
 
 #include <iostream>
 using namespace std;
