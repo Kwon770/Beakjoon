@@ -1,3 +1,4 @@
+
 // https://www.acmicpc.net/problem/1920
 // Binaray Search(1), 수 찾기
 // NUMBER 1920
