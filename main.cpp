@@ -1,13 +1,12 @@
-// https://www.acmicpc.net/problem/6549
-// Divide_and_conquer(9), 히스토그램에서 가장 큰 직사각형
-// NUMBER 6549
+// https://www.acmicpc.net/problem/2261
+// Divide_and_conquer(10), 가장 가까운 두 점
+// NUMBER 2261
 
 #include <iostream>
 using namespace std;
 #define endl "\n"
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
