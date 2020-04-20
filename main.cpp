@@ -1,6 +1,6 @@
-// https://www.acmicpc.net/problem/1920
-// Binaray Search(1), 수 찾기
-// NUMBER 1920
+// https://www.acmicpc.net/problem/10816
+// Binaray Search(2), 숫자 카드 2
+// NUMBER 10816
 
 #include <algorithm>
 #include <iostream>
@@ -12,7 +12,7 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    int n, m;
+    int n, m, mtemp;
     cin >> n;
     vector<int> input(n);
     for (int i = 0; i < n; i++)
@@ -21,27 +21,10 @@ int main() {
 
     cin >> m;
     for (int i = 0; i < m; i++) {
-        int target, left = 0, right = n - 1;
-        bool found = false;
-        cin >> target;
-
-        while (left <= right) {
-            int mid = (left + right) / 2;
-            if (input[mid] < target)
-                left = mid + 1;
-            else if (input[mid] > target)
-                right = mid - 1;
-            else {
-                found = true;
-                break;
-            }
-        }
-
-        if (found)
-            cout << 1 << endl;
-        else
-            cout << 0 << endl;
+        cin >> mtemp;
+        auto low = lower_bound(input.begin(), input.end(), mtemp);
+        auto high = lower_bound(input.begin(), input.end(), mtemp + 1);
+        cout << high - low << " ";
     }
-
     return 0;
 }
