@@ -8,6 +8,9 @@
 using namespace std;
 #define endl "\n"
 
+// 주어지는 숫자들은 int 의 최댓값보다 같거나 작은 값임
+// 따라서 mid 값을 구하기 위해 더하는 과정에서 오버플로우가 나므로 long long 을 사용
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
