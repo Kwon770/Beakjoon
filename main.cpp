@@ -1,44 +1,33 @@
-// https://www.acmicpc.net/problem/2805
+// https://www.acmicpc.net/problem/15829
 // Binaray Search(4), 나무 자르기
-// NUMBER 2805
+// NUMBER 15829
 
-#include <algorithm>
+#include <cmath>
 #include <iostream>
-#include <vector>
+#include <map>
 using namespace std;
 #define endl '\n'
+#define R 31
+#define MOD 1234567891
+
+long long getHash(string str) {
+    long long hash = 0;
+    long long r = 1;
+    for (size_t i = 0; i < str.length(); i++) {
+        long long value = str[i] - '0' - 96;
+        r = i == 0 ? 1 : r * R % MOD;
+        hash += value * r % MOD;
+    }
+    return hash % MOD;
+}
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    int n, m;
-    cin >> n >> m;
-    vector<int> wood(n);
-    for (int i = 0; i < n; i++)
-        cin >> wood[i];
-
-    long long left = 1,
-              right = *max_element(wood.begin(), wood.end()),
-              maxCut = 0;
-    while (left <= right) {
-        long long mid = (left + right) / 2,
-                  obtainedWood = 0;
-        for (int i = 0; i < n; i++)
-            if (wood[i] > mid)
-                obtainedWood += wood[i] - mid;
-
-        if (obtainedWood > m) {
-            left = mid + 1;
-            maxCut = max(maxCut, mid);
-        } else if (obtainedWood < m)
-            right = mid - 1;
-        else {
-            maxCut = max(maxCut, mid);
-            break;
-        }
-    }
-
-    cout << maxCut << endl;
+    int l;
+    string str;
+    cin >> l >> str;
+    cout << getHash(str) << endl;
     return 0;
 }
