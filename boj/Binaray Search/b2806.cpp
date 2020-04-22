@@ -2,6 +2,9 @@
 // Binaray Search(4), 나무 자르기
 // NUMBER 2805
 
+// 각 나무으 최대 길이 10억, 요구하는 나무 길이 최대 20억 이므로,
+// 계산 과정에서 오버플로우 발생을 방지하기 위해 long long 사용
+
 #include <algorithm>
 #include <iostream>
 #include <vector>
