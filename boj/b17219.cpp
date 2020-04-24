@@ -1,6 +1,5 @@
-// https://www.acmicpc.net/problem/1300
-// Binaray Search(6), K번째 수
-// NUMBER 1300
+// https://www.acmicpc.net/problem/17219
+// NUMBER 17219, 비밀번호 찾기
 
 #include <iostream>
 #include <map>
