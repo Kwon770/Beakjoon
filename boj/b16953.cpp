@@ -1,6 +1,5 @@
-// https://www.acmicpc.net/problem/1300
-// Binaray Search(6), K번째 수
-// NUMBER 1300
+// https://www.acmicpc.net/problem/16953
+// NUMBER 16953
 
 #include <iostream>
 using namespace std;
