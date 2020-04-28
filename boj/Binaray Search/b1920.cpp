@@ -3,6 +3,8 @@
 // Binaray Search(1), 수 찾기
 // NUMBER 1920
 
+// Binaray Search, https://www.notion.so/sckwon770/Binaray-Search-b50720f0f2df4aa486cf6b3b4797b6d2
+
 // 이분 탐색 알고리즘을 구현하여 품
 // 이분 탐색이란, https://www.notion.so/sckwon770/Binaray-Search-b50720f0f2df4aa486cf6b3b4797b6d2
 

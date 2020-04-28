@@ -2,6 +2,7 @@
 // Divide_and_conquer(5), 이항 계수 3
 // NUMBER 11401
 
+// Divide and Conquer, https://www.notion.so/sckwon770/Divide-and-conquer-568ac70283ce41b29a01c4e147f4830c
 // 자세한 설명은 https://www.notion.so/sckwon770/11401-d70cb5ed9926472e9c6aceb6cffbfade
 // VLA 사용으로 인해 물제가 발생함. 자세한 내용은 https://www.notion.so/sckwon770/VLA-4ecf788c19f4462584bee754154aedc8
 
@@ -14,12 +15,10 @@ using namespace std;
 
 long long facMod[MAX];
 
-long long power(long long a, long long b)
-{
+long long power(long long a, long long b) {
     if (b == 1)
         return a;
-    else
-    {
+    else {
         long long temp = power(a, b / 2);
         if (b % 2)
             return ((temp * temp) % MOD * a) % MOD;
@@ -28,8 +27,7 @@ long long power(long long a, long long b)
     }
 }
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);

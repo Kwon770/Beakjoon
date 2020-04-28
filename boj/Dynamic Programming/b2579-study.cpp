@@ -2,6 +2,8 @@
 // Dynamic Programming (7), 계단오르기
 // NUMBER 2579
 
+// Dynamic Programming, https://www.notion.so/sckwon770/Dynamic-Programming-0bca6ee333b14aea913f74133a868b0c
+
 // 접근방식은 1149-RGB거리, 1932-정수삼각형과 비슷한 동적계획법 방식이다
 // 주어진 N개의 수를 차례대로 계산하면서 각 수가 선택될 때의 최대의 값을 계산한다
 
@@ -16,13 +18,11 @@ using namespace std;
 #define MAX 300
 int arr[MAX], value[MAX], N;
 
-int Solve()
-{
+int Solve() {
     value[0] = arr[0];
     value[1] = arr[0] + arr[1];
     value[2] = max(arr[0] + arr[2], arr[1] + arr[2]);
-    for (int i = 3; i < N; i++)
-    {
+    for (int i = 3; i < N; i++) {
         value[i] = max(arr[i] + value[i - 2], arr[i] + arr[i - 1] + value[i - 3]);
         value[i] = max(value[i], value[i - 3] + input[i]);
     }
@@ -30,8 +30,7 @@ int Solve()
     return value[N - 1];
 }
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);

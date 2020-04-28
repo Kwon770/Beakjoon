@@ -2,6 +2,8 @@
 // Divide_and_conquer(2), 쿼드트리
 // NUMBER 1992
 
+// Divide and Conquer, https://www.notion.so/sckwon770/Divide-and-conquer-568ac70283ce41b29a01c4e147f4830c
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -12,16 +14,12 @@ string output;
 char fInit = 0;
 bool isSame = true;
 
-int conquer(int xFrom, int xTo, int yFrom, int yTo)
-{
+int conquer(int xFrom, int xTo, int yFrom, int yTo) {
     char init = sq[xFrom][yFrom];
     bool success = true;
-    for (int i = xFrom; i <= xTo; i++)
-    {
-        for (int o = yFrom; o <= yTo; o++)
-        {
-            if (init != sq[i][o])
-            {
+    for (int i = xFrom; i <= xTo; i++) {
+        for (int o = yFrom; o <= yTo; o++) {
+            if (init != sq[i][o]) {
                 success = false;
                 break;
             }
@@ -29,8 +27,7 @@ int conquer(int xFrom, int xTo, int yFrom, int yTo)
         if (!success)
             break;
     }
-    if (success)
-    {
+    if (success) {
         output.push_back(init);
         if (!fInit)
             fInit = init;
@@ -40,21 +37,18 @@ int conquer(int xFrom, int xTo, int yFrom, int yTo)
     return success;
 }
 
-void divide(int n, int xFrom, int xTo, int yFrom, int yTo)
-{
+void divide(int n, int xFrom, int xTo, int yFrom, int yTo) {
     int half = n / 2;
     output.push_back('(');
     for (int i = xFrom; i <= xTo; i += half)
-        for (int o = yFrom; o <= yTo; o += half)
-        {
+        for (int o = yFrom; o <= yTo; o += half) {
             if (!conquer(i, i + half - 1, o, o + half - 1))
                 divide(half, i, i + half - 1, o, o + half - 1);
         }
     output.push_back(')');
 }
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);

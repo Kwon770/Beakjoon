@@ -2,6 +2,8 @@
 // Binaray Search(4), 나무 자르기
 // NUMBER 2805
 
+// Binaray Search, https://www.notion.so/sckwon770/Binaray-Search-b50720f0f2df4aa486cf6b3b4797b6d2
+
 // 각 나무으 최대 길이 10억, 요구하는 나무 길이 최대 20억 이므로,
 // 계산 과정에서 오버플로우 발생을 방지하기 위해 long long 사용
 

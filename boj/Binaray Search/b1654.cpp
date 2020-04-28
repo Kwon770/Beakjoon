@@ -2,6 +2,8 @@
 // Binaray Search(3), 랜선 자르기
 // NUMBER 1654
 
+// Binaray Search, https://www.notion.so/sckwon770/Binaray-Search-b50720f0f2df4aa486cf6b3b4797b6d2
+
 #include <algorithm>
 #include <iostream>
 #include <vector>

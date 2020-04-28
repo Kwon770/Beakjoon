@@ -2,6 +2,8 @@
 // Dynamic Programming (15), 연속합
 // NUMBER 1912
 
+// Dynamic Programming, https://www.notion.so/sckwon770/Dynamic-Programming-0bca6ee333b14aea913f74133a868b0c
+
 // 계속 생길 수 있는 경우를 모두 비교하되 필요없는 연산을 제외하는 식으로 접근해서
 // Backtrace를 DP 한 방식으로 푸는 경향이 있음
 // 연속된 숫자끼리만 가능하며, 최대값을 구하는 것임을 주목하여 문제의 본질을 파악해야함
@@ -17,8 +19,7 @@
 using namespace std;
 #define MAX 100000
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
@@ -30,8 +31,7 @@ int main()
 
     dp[0] = arr[0];
     maxVal = max(maxVal, dp[0]);
-    for (int i = 1; i < n; i++)
-    {
+    for (int i = 1; i < n; i++) {
         dp[i] = max(dp[i - 1] + arr[i], arr[i]);
         maxVal = max(maxVal, dp[i]);
     }

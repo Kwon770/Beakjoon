@@ -2,6 +2,7 @@
 // Math3 (8) 이항 계수
 // NUMBER 11050
 
+// Math Theorem, https://www.notion.so/sckwon770/Math-Theorem-6a3043ed872b41b88fbbafaddbde2fc2
 // 이항 계수 https://www.notion.so/sckwon770/c6476b1b276b4a8f86ad58caaff72181
 // 동적 계획법  https://www.notion.so/sckwon770/Dynamic-Programming-0bca6ee333b14aea913f74133a868b0c
 
@@ -26,18 +27,14 @@ using namespace std;
 #define DIVIDE 10007
 int arr[MAX][MAX];
 
-int Solve(int n, int k)
-{
-    for (int i = 0; i <= n; i++)
-    {
+int Solve(int n, int k) {
+    for (int i = 0; i <= n; i++) {
         arr[i][0] = arr[i][i] = 1;
         arr[i][1] = i;
     }
 
-    for (int i = 3; i <= n; i++)
-    {
-        for (int o = 2; o <= k; o++)
-        {
+    for (int i = 3; i <= n; i++) {
+        for (int o = 2; o <= k; o++) {
             arr[i][o] = (arr[i - 1][o] + arr[i - 1][o - 1]) % DIVIDE;
         }
     }
@@ -45,8 +42,7 @@ int Solve(int n, int k)
     return arr[n][k] % DIVIDE;
 }
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);

@@ -2,6 +2,8 @@
 // Dynamic Programming (5), RGB거리
 // NUMBER 1149
 
+// Dynamic Programming, https://www.notion.so/sckwon770/Dynamic-Programming-0bca6ee333b14aea913f74133a868b0c
+
 // 단순히 생각하면 Backtracking 이 떠오지만, .5초의 제한이 있으므로 최대한 효율적으로 풀어야 함
 // 선택에 따른 합의 비교를 입력단과 이전 입력단의 합으로만 비교할 경우, 다음과 같은 경우에 오류가 발생
 // 22 18 20
@@ -15,14 +17,12 @@
 
 using namespace std;
 
-void Solve(int N)
-{
+void Solve(int N) {
     int r, g, b, cache[3], rgb[3];
     cin >> r >> g >> b;
     rgb[0] = r, rgb[1] = g, rgb[2] = b;
 
-    for (int i = 1; i < N; i++)
-    {
+    for (int i = 1; i < N; i++) {
         for (int o = 0; o < 3; o++)
             cache[o] = rgb[o];
 
@@ -35,8 +35,7 @@ void Solve(int N)
     cout << min(min(rgb[0], rgb[1]), rgb[2]) << endl;
 }
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);

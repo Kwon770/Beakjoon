@@ -2,6 +2,8 @@
 // Divide_and_conquer(4), 곱셈
 // NUMBER 1629
 
+// Divide and Conquer, https://www.notion.so/sckwon770/Divide-and-conquer-568ac70283ce41b29a01c4e147f4830c
+
 // 모듈러의 연산을 이용하여 for문 반복하는 코드를 작성하였으나, 시간초과
 // (모듈러의 연산을 통해 연산할 숫자가 낮으면 연산시간이 개선될거라 생각함)
 // (숫자의 크기는 메모리쪽, 시간의 복잡도에서도 이는 고려하는 사항이 아님)
@@ -18,12 +20,10 @@
 using namespace std;
 #define endl '\n'
 
-long long pow(int a, int b, int c)
-{
+long long pow(int a, int b, int c) {
     if (b == 1)
         return a;
-    else
-    {
+    else {
         long long temp = pow(a, b / 2, c);
         if (b % 2)
             return ((temp * temp) % c * a) % c;
@@ -32,8 +32,7 @@ long long pow(int a, int b, int c)
     }
 }
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);

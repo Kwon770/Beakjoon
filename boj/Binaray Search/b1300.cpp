@@ -2,6 +2,7 @@
 // Binaray Search(6), K번째 수
 // NUMBER 1300
 
+// Binaray Search, https://www.notion.so/sckwon770/Binaray-Search-b50720f0f2df4aa486cf6b3b4797b6d2
 // Notion, https://www.notion.so/sckwon770/1300-K-f25f0d49539a4e1da91041612ea1e746
 
 #include <algorithm>

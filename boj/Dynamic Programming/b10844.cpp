@@ -2,6 +2,8 @@
 // Dynamic Programming (9), 쉬운 계단 수
 // NUMBER 10844
 
+// Dynamic Programming, https://www.notion.so/sckwon770/Dynamic-Programming-0bca6ee333b14aea913f74133a868b0c
+
 // 1 2 3 4 5 6 7 8 9
 // 10 11 21 22 32 34 ...
 
@@ -22,16 +24,13 @@ using namespace std;
 #define DIV 1000000000
 int value[MAX][11];
 
-void Solve(int n)
-{
+void Solve(int n) {
     for (int i = 1; i <= 9; i++)
         value[1][i] = 1;
 
-    for (int i = 2; i <= n; i++)
-    {
+    for (int i = 2; i <= n; i++) {
         value[i][0] = value[i - 1][1];
-        for (int o = 1; o <= 9; o++)
-        {
+        for (int o = 1; o <= 9; o++) {
             value[i][o] = (value[i - 1][o - 1] + value[i - 1][o + 1]) % DIV;
         }
     }
@@ -42,8 +41,7 @@ void Solve(int n)
     cout << sum % DIV << endl;
 }
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);

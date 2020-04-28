@@ -2,22 +2,22 @@
 // Divide_and_conquer(9), 히스토그램에서 가장 큰 직사각형
 // NUMBER 6549
 
+// Divide and Conquer, https://www.notion.so/sckwon770/Divide-and-conquer-568ac70283ce41b29a01c4e147f4830c
+
+#include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <vector>
-#include <cmath>
-#include <algorithm>
 using namespace std;
 #define endl "\n"
 
-void init(vector<int> &arr, vector<int> &tree, int node, int start, int end)
-{
+void init(vector<int> &arr, vector<int> &tree, int node, int start, int end) {
     // leaf node (what don't have children node)
     if (start == end)
         tree[node] = start;
 
     // internal node
-    else
-    {
+    else {
         // node * 2 : left children node // node * 2 + 1 : right children node
         int mid = (start + end) / 2;
         init(arr, tree, node * 2, start, mid);
@@ -32,8 +32,7 @@ void init(vector<int> &arr, vector<int> &tree, int node, int start, int end)
 }
 
 // get lowest bar from end to start
-int query(vector<int> &arr, vector<int> &tree, int node, int start, int end, int left, int right)
-{
+int query(vector<int> &arr, vector<int> &tree, int node, int start, int end, int left, int right) {
     if (left > end || right < start)
         return -1;
 
@@ -50,8 +49,7 @@ int query(vector<int> &arr, vector<int> &tree, int node, int start, int end, int
     else if (m2 == -1)
         return m1;
 
-    else
-    {
+    else {
         if (arr[m1] <= arr[m2])
             return m1;
         else
@@ -59,16 +57,14 @@ int query(vector<int> &arr, vector<int> &tree, int node, int start, int end, int
     }
 }
 
-long long getMax(vector<int> &arr, vector<int> &tree, int start, int end)
-{
+long long getMax(vector<int> &arr, vector<int> &tree, int start, int end) {
     int n = arr.size();
     int m = query(arr, tree, 1, 0, n - 1, start, end);
 
     long long area = (long long)(end - start + 1) * (long long)arr[m];
 
     // When there is bar left to lowest bar
-    if (start <= m - 1)
-    {
+    if (start <= m - 1) {
         long long tmp = getMax(arr, tree, start, m - 1);
 
         if (area < tmp)
@@ -76,8 +72,7 @@ long long getMax(vector<int> &arr, vector<int> &tree, int start, int end)
     }
 
     // When there is bar right to lowest bar
-    if (m + 1 <= end)
-    {
+    if (m + 1 <= end) {
         long long tmp = getMax(arr, tree, m + 1, end);
         if (area < tmp)
             area = tmp;
@@ -86,14 +81,12 @@ long long getMax(vector<int> &arr, vector<int> &tree, int start, int end)
     return area;
 }
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
 
-    while (true)
-    {
+    while (true) {
         int n;
         cin >> n;
         if (n == 0)

@@ -2,6 +2,8 @@
 // Divide_and_conquer(3), 종이의 개수
 // NUMBER 1780
 
+// Divide and Conquer, https://www.notion.so/sckwon770/Divide-and-conquer-568ac70283ce41b29a01c4e147f4830c
+
 // 1992, 2630 번의 응용
 
 #include <iostream>
@@ -12,16 +14,12 @@ vector<vector<int>> sq(2188, vector<int>(2188, 0));
 bool isClear = true;
 int minuss = 0, zero = 0, pluss = 0, fInit;
 
-int conquer(int xFrom, int xTo, int yFrom, int yTo)
-{
+int conquer(int xFrom, int xTo, int yFrom, int yTo) {
     int init = sq[xFrom][yFrom];
     bool success = true;
-    for (int i = xFrom; i <= xTo; i++)
-    {
-        for (int o = yFrom; o <= yTo; o++)
-        {
-            if (init != sq[i][o])
-            {
+    for (int i = xFrom; i <= xTo; i++) {
+        for (int o = yFrom; o <= yTo; o++) {
+            if (init != sq[i][o]) {
                 success = false;
                 break;
             }
@@ -29,8 +27,7 @@ int conquer(int xFrom, int xTo, int yFrom, int yTo)
         if (!success)
             break;
     }
-    if (success)
-    {
+    if (success) {
         if (init == -1)
             minuss++;
         else if (init == 0)
@@ -43,8 +40,7 @@ int conquer(int xFrom, int xTo, int yFrom, int yTo)
     return success;
 }
 
-void divide(int n, int xFrom, int xTo, int yFrom, int yTo)
-{
+void divide(int n, int xFrom, int xTo, int yFrom, int yTo) {
     int tri = n / 3;
     for (int i = xFrom; i <= xTo; i += tri)
         for (int o = yFrom; o <= yTo; o += tri)
@@ -52,8 +48,7 @@ void divide(int n, int xFrom, int xTo, int yFrom, int yTo)
                 divide(tri, i, i + tri - 1, o, o + tri - 1);
 }
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
@@ -64,8 +59,7 @@ int main()
             cin >> sq[i][o];
     fInit = sq[1][1];
     divide(n, 1, n, 1, n);
-    if (isClear)
-    {
+    if (isClear) {
         minuss = minuss > 0 ? 1 : 0;
         zero = zero > 0 ? 1 : 0;
         pluss = pluss > 0 ? 1 : 0;

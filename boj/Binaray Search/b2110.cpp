@@ -2,6 +2,8 @@
 // Binaray Search(5), 공유기 설치
 // NUMBER 2110
 
+// Binaray Search, https://www.notion.so/sckwon770/Binaray-Search-b50720f0f2df4aa486cf6b3b4797b6d2
+
 // 확인할 거리의 선택은 이진탐색을 통해서 복잡도를 줄이고,
 // 해당 거리가 유효하는지는 isPossible을 통해 집마다 확인을 함.
 // 공유가가 설치된 이전 집과 현재의 집의 거리가 선택한 거리 이상이여야 하며, 이런 집들이 목표보다 많아야 유효함.

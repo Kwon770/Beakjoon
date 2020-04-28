@@ -1,7 +1,8 @@
 // https://www.acmicpc.net/problem/11053
 // Dynamic Programming (11), 가장 긴 증가하는 부분 수열
 // NUMBER 11053
-// 정리 https://www.notion.so/sckwon770/11053-72665b21404f4711a5fbb121f8d220fb
+// Dynamic Programming, https://www.notion.so/sckwon770/Dynamic-Programming-0bca6ee333b14aea913f74133a868b0c
+// 11053 Note, https://www.notion.so/sckwon770/11053-72665b21404f4711a5fbb121f8d220fb
 
 // 수열 3 2 5 2 3 1 4
 // 부분 수열 => 3, 2 5, 3 5 3 1
@@ -24,14 +25,11 @@ using namespace std;
 #define MAX 1001
 int input[MAX], maxLen = 0;
 
-void Solve(int n)
-{
+void Solve(int n) {
     int result[n + 1];
     fill_n(result, n + 1, 1);
-    for (int i = n; i > 0; i--)
-    {
-        for (int o = i; o <= n; o++)
-        {
+    for (int i = n; i > 0; i--) {
+        for (int o = i; o <= n; o++) {
             if (input[i] < input[o])
                 result[i] = max(result[i], result[o] + 1);
             maxLen = max(maxLen, result[i]);
@@ -40,8 +38,7 @@ void Solve(int n)
     cout << maxLen << endl;
 }
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);

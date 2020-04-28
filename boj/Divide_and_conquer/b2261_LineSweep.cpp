@@ -2,11 +2,9 @@
 // Divide_and_conquer(10), 가장 가까운 두 점
 // NUMBER 2261
 
-// 라인 스윕, Line Sweep
-// https://www.acmicpc.net/blog/view/25
-
-// 노션 정리
-// https://www.notion.so/sckwon770/2261-7e5362e6833f4a12bf48529b333b9019
+// Divide and Conquer, https://www.notion.so/sckwon770/Divide-and-conquer-568ac70283ce41b29a01c4e147f4830c
+// 라인 스윕, Line Sweep, https://www.acmicpc.net/blog/view/25
+// 노션 정리, https://www.notion.so/sckwon770/2261-7e5362e6833f4a12bf48529b333b9019
 
 #include <algorithm>
 #include <cmath>

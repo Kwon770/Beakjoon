@@ -2,30 +2,26 @@
 // Dynamic Programming (16), 평범한 배낭
 // NUMBER 12865
 
-// 노션 정리본 https://www.notion.so/sckwon770/12865-1b447fa265ce4dc89dabd8e9a79f8000
+// Dynamic Programming, https://www.notion.so/sckwon770/Dynamic-Programming-0bca6ee333b14aea913f74133a868b0c
+// 12865 Note, https://www.notion.so/sckwon770/12865-1b447fa265ce4dc89dabd8e9a79f8000
 
 #include <iostream>
-#include <vector>
 #include <utility>
+#include <vector>
 
 using namespace std;
 int bag[101][100001];
 vector<pair<int, int> > item;
 
-void solve(int N, int K)
-{
+void solve(int N, int K) {
     for (int i = 0; i < N; i++)
         for (int o = 0; o <= K; o++)
             bag[i][o] = 0;
-    
-    for (int i = 0; i < N; i++)
-    {
-        for (int o = 0; o <= K; o++)
-        {
-            if (i == 0)
-            {
-                if (item[i].first <= o)
-                {
+
+    for (int i = 0; i < N; i++) {
+        for (int o = 0; o <= K; o++) {
+            if (i == 0) {
+                if (item[i].first <= o) {
                     bag[i][o] = item[i].second;
                 }
                 continue;
@@ -39,16 +35,14 @@ void solve(int N, int K)
     cout << bag[N - 1][K] << endl;
 }
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
 
     int N, K, w, v;
     cin >> N >> K;
-    for (int i = 0; i < N; i++)
-    {
+    for (int i = 0; i < N; i++) {
         cin >> w >> v;
         item.push_back(make_pair(w, v));
     }

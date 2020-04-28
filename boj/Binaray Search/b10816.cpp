@@ -2,6 +2,8 @@
 // Binaray Search(2), 숫자 카드 2
 // NUMBER 10816
 
+// Binaray Search, https://www.notion.so/sckwon770/Binaray-Search-b50720f0f2df4aa486cf6b3b4797b6d2
+
 // 이분 탐색을 통해 target 을 찾은 후 앞뒤로 몇개가 있는지를 세리는 코드를 짰으나, 시간 초과가 발생함.
 // target 이 많을수록 많은 연산이 필요하므로, lower_bound 를 이용하여 2번의 이분 탐색으로 답을 구할 수 있음.
 

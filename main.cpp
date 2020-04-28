@@ -1,6 +1,6 @@
-// https://www.acmicpc.net/problem/12015
-// Binaray Search(7), 가장 긴 증가하는 부분 수열 2
-// NUMBER 12015
+// https://www.acmicpc.net/problem/11279
+// Priority Queue(1), 최대 힙
+// NUMBER 11279
 
 #include <algorithm>
 #include <iostream>

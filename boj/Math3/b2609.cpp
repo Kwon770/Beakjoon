@@ -2,6 +2,8 @@
 // Math3 (4) 최공 최약
 // NUMBER 2690
 
+// Math Theorem, https://www.notion.so/sckwon770/Math-Theorem-6a3043ed872b41b88fbbafaddbde2fc2
+
 // 유클리드 알고리즘 사용
 // 1. 임의의 두 정수 a, b 입력
 // 2. b 가 a 보다 크다면 a 와 b 값 교체
@@ -19,16 +21,13 @@ using namespace std;
 
 #define endl "\n"
 
-int GetLcm(int _gcd, int a, int b)
-{
+int GetLcm(int _gcd, int a, int b) {
     return a * b / _gcd;
 }
 
-int GetGcd(int a, int b)
-{
+int GetGcd(int a, int b) {
     int t;
-    while (b)
-    {
+    while (b) {
         t = a % b;
         a = b;
         b = t;
@@ -36,8 +35,7 @@ int GetGcd(int a, int b)
     return a;
 }
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
