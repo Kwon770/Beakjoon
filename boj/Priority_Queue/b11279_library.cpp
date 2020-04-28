@@ -2,6 +2,7 @@
 // Priority Queue(1), 최대 힙
 // NUMBER 11279
 
+// 라이브러리 이용
 // Priority Queue, https://www.notion.so/sckwon770/Priority-Queue-f6af9997d8004d648f5ccef59395154e
 
 #include <algorithm>
