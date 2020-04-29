@@ -1,5 +1,5 @@
 // https://www.acmicpc.net/problem/1927
-// Priority Queue(1), 최대 힙
+// Priority Queue(2), 최소 힙
 // NUMBER 1927
 
 // 배열을 이용해 최소 힙 구현
