@@ -2,6 +2,7 @@
 // Priority Queue(1), 최대 힙
 // NUMBER 1927
 
+// 배열을 이용해 최소 힙 구현
 // Priority Queue, https://www.notion.so/sckwon770/Priority-Queue-f6af9997d8004d648f5ccef59395154e
 
 #include <algorithm>
