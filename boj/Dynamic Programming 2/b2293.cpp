@@ -3,6 +3,7 @@
 // NUMBER 2293
 
 // Dynamic Programming, https://www.notion.so/sckwon770/Dynamic-Programming-0bca6ee333b14aea913f74133a868b0c
+// 동적 프로그래밍이라고 무조건 재귀적으로 푸는 것이 아니고, 메모제이션을 잘 활용해야함
 
 #include <algorithm>
 #include <iostream>
