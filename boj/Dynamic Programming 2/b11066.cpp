@@ -3,6 +3,7 @@
 // NUMBER 11066
 
 // Dynamic Programming, https://www.notion.so/sckwon770/Dynamic-Programming-0bca6ee333b14aea913f74133a868b0c
+// Solution Notion page, https://www.notion.so/sckwon770/11066-d10ab5528b7b480f964abb83d4377e8b
 
 #include <algorithm>
 #include <cstring>

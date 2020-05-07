@@ -1,5 +1,5 @@
 // https://www.acmicpc.net/problem/2293
-// Dynamic Programming (1), 동전1
+// Dynamic Programming2 (1), 동전1
 // NUMBER 2293
 
 // Dynamic Programming, https://www.notion.so/sckwon770/Dynamic-Programming-0bca6ee333b14aea913f74133a868b0c
