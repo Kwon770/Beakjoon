@@ -1,8 +1,15 @@
-// https://www.acmicpc.net/problem/1520
-// Dynamic Programming2 (3), 내리막길
-// NUMBER 1520
+// https://www.acmicpc.net/problem/11066
+// Dynamic Programming2 (2), 파일 합치기
+// NUMBER 11066
 
 // Dynamic Programming, https://www.notion.so/sckwon770/Dynamic-Programming-0bca6ee333b14aea913f74133a868b0c
+// 처음에는 TLE가 예상되지만 확인차 dfs를 이용한 재귀만으로 풀었다, dp와 메모이제이션을 이용한 해설을 떠올림
+// 다만 코드 구현의 부족으로 해답을 봄. [x][y+1] [x][y-1] [x+1][y] [x-1][y] 를 반복을 통해 구현하지 못하여서 해결못함.
+
+// 그 외에 조심해야할 부분은 dp를 -1로 초기화하여 아직 확인하지 못한 부분을 표기하고,
+// 확인하는 과정에서 0으로 선언한다. 이로써 조건을 충족하지 못하면 값을 더하지 않아 0으로 남겨두고, 충족할경우 값을 더한다.
+// 값을 더하였으면, 충족하므로 반환하여 사용할때마다 값이 더해지고
+// 더하지 않았으면, 충족하지 않으므로 반환한다 하더라도 값이 0이므로 결과에 영향을 주지 않음.
 
 #include <algorithm>
 #include <iostream>
