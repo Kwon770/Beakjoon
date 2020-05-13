@@ -1,6 +1,6 @@
-// https://www.acmicpc.net/problem/11066
-// Dynamic Programming2 (2), 파일 합치기
-// NUMBER 11066
+// https://www.acmicpc.net/problem/11049
+// Dynamic Programming2 (3), 행렬 곱셈 순서
+// NUMBER 11049
 
 // Dynamic Programming, https://www.notion.so/sckwon770/Dynamic-Programming-0bca6ee333b14aea913f74133a868b0c
 // Reference Solution, https://js1jj2sk3.tistory.com/37#recentEntriesß

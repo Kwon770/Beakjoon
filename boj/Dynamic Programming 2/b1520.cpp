@@ -1,6 +1,6 @@
-// https://www.acmicpc.net/problem/11066
-// Dynamic Programming2 (2), 파일 합치기
-// NUMBER 11066
+// https://www.acmicpc.net/problem/1520
+// Dynamic Programming2 (4), 내리막길
+// NUMBER 1520
 
 // Dynamic Programming, https://www.notion.so/sckwon770/Dynamic-Programming-0bca6ee333b14aea913f74133a868b0c
 // 처음에는 TLE가 예상되지만 확인차 dfs를 이용한 재귀만으로 풀었다, dp와 메모이제이션을 이용한 해설을 떠올림
