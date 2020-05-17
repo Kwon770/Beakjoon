@@ -65,6 +65,7 @@
         "stack": "cpp",
         "queue": "cpp",
         "__tree": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "map": "cpp"
     }
 }
