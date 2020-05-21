@@ -1,36 +1,62 @@
-// https://www.acmicpc.net/problem/2606
-// DFS-BFS (1), 바이러스
-// NUMBER 2606
+// https://www.acmicpc.net/problem/2667
+// DFS-BFS (3), 단지번호 붙이기
+// NUMBER 2667
 
+#include <algorithm>
+#include <cstdio>
 #include <cstring>
 #include <iostream>
+#include <vector>
 #define endl "\n"
 using namespace std;
 
-int graph[101][101], visited[101], num, connection, cnt = 0;
+const int dx[4] = {0, 0, 1, -1};
+const int dy[4] = {1, -1, 0, 0};
 
-void dfs(int n) {
-    for (int i = 1; i <= num; i++) {
-        if (graph[n][i] && !visited[i]) {
-            cnt++;
-            visited[i] = 1;
-            dfs(i);
+int graph[26][26], visited[26][26], n;
+vector<int> apart;
+
+int dfs(int x, int y) {
+    visited[x][y] = 1;
+    int cnt = 1;
+    for (int i = 0; i < 5; i++) {
+        int cx = x + dx[i];
+        int cy = y + dy[i];
+        if (cx > 0 && cx <= n && cy > 0 && cy <= n && graph[cx][cy] && !visited[cx][cy]) {
+            cnt += dfs(cx, cy);
         }
     }
+    return cnt;
 }
 
 int main() {
     memset(graph, 0, sizeof(graph));
     memset(visited, 0, sizeof(visited));
-    cin >> num >> connection;
-    int tmp1, tmp2;
-    for (int i = 0; i < connection; i++) {
-        cin >> tmp1 >> tmp2;
-        graph[tmp1][tmp2] = 1;
-        graph[tmp2][tmp1] = 1;
+    cin >> n;
+    int tmp;
+    for (int i = 1; i <= n; i++) {
+        for (int o = 1; o <= n; o++) {
+            while (true) {
+                tmp = getchar();
+                if (tmp != '\n') break;
+            }
+            graph[i][o] = tmp - '0';
+        }
     }
-    visited[1] = 1;
-    dfs(1);
+
+    int cnt = 0;
+    for (int i = 1; i <= n; i++) {
+        for (int o = 1; o <= n; o++) {
+            if (graph[i][o] && !visited[i][o]) {
+                apart.push_back(dfs(i, o));
+                cnt++;
+            }
+        }
+    }
+
     cout << cnt << endl;
+    sort(apart.begin(), apart.end());
+    for (auto iter = apart.begin(); iter != apart.end(); iter++)
+        cout << *iter << endl;
     return 0;
 }
