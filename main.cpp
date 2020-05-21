@@ -1,5 +1,5 @@
-// https://www.acmicpc.net/problem/2667
-// NUMBER 2667
+// https://www.acmicpc.net/problem/9095
+// NUMBER 9095, 1 2 3 더하기
 
 #include <algorithm>
 #include <cstdio>
