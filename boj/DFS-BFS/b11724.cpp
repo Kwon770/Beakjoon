@@ -1,6 +1,10 @@
 // https://www.acmicpc.net/problem/11724
 // NUMBER 11724, 연결 요소의 개수
 
+// 단순한 DFS 문제이다.
+// 시각화하기 쉬운 2차원 데이터가 아니므로, 데이터의 연결관계만 생각하며 푼다.
+// 연결 요소의 개수만 구하면 되므로, 일단 연결관계를 확인한 노드는 더이상 필요가 없음을 인지하고 풀면 된다.
+
 #include <algorithm>
 #include <cstdio>
 #include <cstring>
