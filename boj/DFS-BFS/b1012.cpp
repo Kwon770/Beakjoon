@@ -2,6 +2,12 @@
 // DFS-BFS (4), 유기농 배추
 // NUMBER 1012
 
+// 2667번, https://github.com/Kwon770/Algorithm/blob/master/boj/DFS-BFS/b2667.cpp
+
+// 2667번 단지번호 붙이기와 거의 비슷한 DFS다.
+// 입력과 출력, 그리고 주어지는 인덱스가 0부터 시작하며,
+// 각각의 붙어있는 요소의 개수가 필요없으므로 cnt 변수의 쓰임에 약간의 변형이 필요하다.
+
 #include <algorithm>
 #include <cstdio>
 #include <cstring>
