@@ -2,6 +2,8 @@
 // DFS-BFS (1), 바이러스
 // NUMBER 2606
 
+// DFS BFS, https://www.notion.so/sckwon770/DFS-BFS-6ec22005435048b18669df0f2541538c
+
 #include <cstring>
 #include <iostream>
 #define endl "\n"

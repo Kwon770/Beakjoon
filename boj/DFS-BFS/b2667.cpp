@@ -2,6 +2,8 @@
 // DFS-BFS (3), 단지번호 붙이기
 // NUMBER 2667
 
+// DFS BFS, https://www.notion.so/sckwon770/DFS-BFS-6ec22005435048b18669df0f2541538c
+
 // 단순히 DFS를 시행하는 문제다.
 
 #include <algorithm>

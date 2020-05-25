@@ -2,6 +2,7 @@
 // DFS-BFS (4), 유기농 배추
 // NUMBER 1012
 
+// DFS BFS, https://www.notion.so/sckwon770/DFS-BFS-6ec22005435048b18669df0f2541538c
 // 2667번, https://github.com/Kwon770/Algorithm/blob/master/boj/DFS-BFS/b2667.cpp
 
 // 2667번 단지번호 붙이기와 거의 비슷한 DFS다.
