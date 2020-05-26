@@ -1,5 +1,13 @@
 // https://www.acmicpc.net/problem/7576
+// DFS-BFS (6), 미로 탐색
 // NUMBER 7576
+
+// DFS BFS, https://www.notion.so/sckwon770/DFS-BFS-6ec22005435048b18669df0f2541538c
+
+// 단순한 BFS를 활용한 문제이다.
+// 이 문제에서 묻는 소요 날 = BFS를 탐색을 할 때 내려간 깊이, 임을 알 수 있다.
+// 이 깊이의 측정의 구현이 복잡하게 느껴질 수 있는데, 단순히 각 깊이의 노드 수를 기억하고 몇개의 노드를 검사했는지와
+// 비교하면 간단히 구현할 수 있다.
 
 #include <algorithm>
 #include <iostream>
