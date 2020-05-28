@@ -1,5 +1,5 @@
 // https://www.acmicpc.net/problem/7576
-// DFS-BFS (6), 미로 탐색
+// DFS-BFS (6), 토마토 (2차원)
 // NUMBER 7576
 
 // DFS BFS, https://www.notion.so/sckwon770/DFS-BFS-6ec22005435048b18669df0f2541538c
