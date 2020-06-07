@@ -14,7 +14,7 @@
 #define MAX_V 20001
 #define MAX_E 300001
 using namespace std;
-int start_node, V, E;
+int startNode, V, E;
 
 struct NODE {
     int to;
@@ -30,7 +30,7 @@ int dist[MAX_V];
 
 void dijkstra() {
     priority_queue<pair<int, int> > pq;
-    pq.push({0, start_node});
+    pq.push({0, startNode});
 
     while (!pq.empty()) {
         int cur_node = pq.top().second;
@@ -62,7 +62,7 @@ int main() {
     cin.tie(NULL);
     cout.tie(NULL);
 
-    cin >> V >> E >> start_node;
+    cin >> V >> E >> startNode;
 
     int from, to, val;
     // 간선 연결
@@ -75,7 +75,7 @@ int main() {
     for (int i = 1; i <= V; i++) {
         dist[i] = INF;
     }
-    dist[start_node] = 0;
+    dist[startNode] = 0;
 
     dijkstra();
 
