@@ -2,7 +2,8 @@
 // Shortest path 4, 타임머신
 // NUMBER 11657
 
-// 벨만 포드 알고리즘, https://www.notion.so/sckwon770/Bellman-Ford-Algorithmn-c48141e976dc4dfdbe6d7276673a7499
+// 이 문제는 간선의 가중치가 음수가 있으므로, 다익스트라는 사용이 불가능하며, 벨만 포드 알고리즘을 사용해야 한다.
+// 벨만 포드 알고리즘 정리본, https://www.notion.so/sckwon770/Bellman-Ford-Algorithmn-c48141e976dc4dfdbe6d7276673a7499
 
 #include <algorithm>
 #include <cstring>
@@ -12,8 +13,8 @@
 #define endl "\n"
 using namespace std;
 
-// #define INF 0x3f3f3f3f
-#define INF 987654321
+#define INF 0x3f3f3f3f3f3f3f3f
+// #define INF 987654321
 #define MAX 501
 
 int main() {
@@ -26,8 +27,8 @@ int main() {
     vector<pair<int, int>> edges[MAX];
     int N, M;
     long long dist[MAX];
-    // memset(dist, 0x3f, sizeof(dist));
-    fill(dist, dist + MAX, INF);
+    memset(dist, 0x3f, sizeof(dist));
+    // fill(dist, dist + MAX, INF);
     dist[1] = 0;
     cin >> N >> M;
 
