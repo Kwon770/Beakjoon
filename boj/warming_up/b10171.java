@@ -7,12 +7,9 @@
 // 이에 대해 자세히 다룬 자료
 // https://it-man.tistory.com/586
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
-import java.util.Scanner;
+package boj.warming_up;
 
-public class Main {
+public class b10171 {
     public static void main(String[] args) {
         System.out.println("\\    /\\ \n" + " )  ( ')\n" + "(  /  )\n" + " \\(__)|");
 
