@@ -1,13 +1,8 @@
-// https://www.acmicpc.net/problem/14681
-// IF문(4), 사분면고르기
-// NUMBER 14681
+package boj.warming_up;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 import java.util.Scanner;
 
-public class Main {
+public class b14681 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int x, y;
