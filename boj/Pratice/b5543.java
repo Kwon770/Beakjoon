@@ -1,16 +1,16 @@
-// https://www.acmicpc.net/problem/14681
-// IF문(4), 사분면고르기
-// NUMBER 14681
+// https://www.acmicpc.net/problem/5543
+// 실습(2), 상근날드
+// NUMBER 5543
 
-import java.io.BufferedReader;
-// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+// 단순히 if문을 통한 비교로 구현할 수 있는 문제이다.
+// 입력즉시 오름차순 정렬을 하는 TreeSet을 이용해서 풀어봤다.
+
+package boj.Pratice;
+
 import java.util.TreeSet;
 import java.util.Scanner;
-// Scanner scanner = new Scanner(System.in);
 
-public class Main {
+public class b5543 {
     public static void main(String[] args) {
         TreeSet<Integer> bugers = new TreeSet<>();
         TreeSet<Integer> drinks = new TreeSet<>();

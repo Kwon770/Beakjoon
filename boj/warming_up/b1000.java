@@ -1,6 +1,7 @@
 // https://www.acmicpc.net/problem/1000
 // 입출력과 사칙연산(5), A + B
 // NUMBER 1000
+package boj.warming_up;
 
 import java.util.Scanner;
 
