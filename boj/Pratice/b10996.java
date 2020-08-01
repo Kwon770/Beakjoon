@@ -1,16 +1,11 @@
-// https://www.acmicpc.net/problem/2523
-// 실습 (4), 별찍기 - 13
-// NUMBER 2523
+// https://www.acmicpc.net/problem/10996
+// 실습 (6), 별찍기 - 21
+// NUMBER 10996
+package boj.Pratice;
 
-// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-// Scanner scanner = new Scanner(System.in);
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 import java.util.Scanner;
 
-public class Main {
+public class b10996 {
     static int n;
     static StringBuilder sb;
 
