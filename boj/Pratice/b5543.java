@@ -5,7 +5,7 @@
 // 단순히 if문을 통한 비교로 구현할 수 있는 문제이다.
 // 입력즉시 오름차순 정렬을 하는 TreeSet을 이용해서 풀어봤다.
 
-package boj.Pratice;
+package boj.pratice;
 
 import java.util.TreeSet;
 import java.util.Scanner;

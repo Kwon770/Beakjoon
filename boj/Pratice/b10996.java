@@ -1,7 +1,7 @@
 // https://www.acmicpc.net/problem/10996
 // 실습 (6), 별찍기 - 21
 // NUMBER 10996
-package boj.Pratice;
+package boj.pratice;
 
 import java.util.Scanner;
 

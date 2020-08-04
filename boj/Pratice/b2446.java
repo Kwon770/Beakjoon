@@ -1,7 +1,7 @@
 // https://www.acmicpc.net/problem/2523
 // 실습 (5), 별찍기 - 9
 // NUMBER 2523
-package boj.Pratice;
+package boj.pratice;
 
 import java.util.Scanner;
 
