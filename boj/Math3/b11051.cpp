@@ -1,5 +1,5 @@
 // https://www.acmicpc.net/problem/11050
-// Math3 (8) 이항 계수
+// math3 (8) 이항 계수
 // NUMBER 11050
 
 // Math Theorem, https://www.notion.so/sckwon770/Math-Theorem-6a3043ed872b41b88fbbafaddbde2fc2

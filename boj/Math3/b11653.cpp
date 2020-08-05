@@ -1,5 +1,5 @@
 // https://www.acmicpc.net/problem/11653
-// Math3 (3) 소인수분해
+// math3 (3) 소인수분해
 // NUMBER 11653
 
 // Math Theorem, https://www.notion.so/sckwon770/Math-Theorem-6a3043ed872b41b88fbbafaddbde2fc2

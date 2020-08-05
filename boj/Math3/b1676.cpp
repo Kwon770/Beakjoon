@@ -1,5 +1,5 @@
 // https://www.acmicpc.net/problem/1676
-// Math3(10), 팩토리얼 0의 개수
+// math3(10), 팩토리얼 0의 개수
 // NUMBER 1676
 
 // Math Theorem, https://www.notion.so/sckwon770/Math-Theorem-6a3043ed872b41b88fbbafaddbde2fc2

@@ -1,5 +1,5 @@
 // https://www.acmicpc.net/problem/3036
-// Math3 (6) 링
+// math3 (6) 링
 // NUMBER 3036
 
 // Math Theorem, https://www.notion.so/sckwon770/Math-Theorem-6a3043ed872b41b88fbbafaddbde2fc2

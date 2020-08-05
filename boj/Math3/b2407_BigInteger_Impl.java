@@ -7,7 +7,7 @@
 
 // 이 코드는 BigInteger의 덧셈을 직접 구현하였다.
 
-package boj.Math3;
+package boj.math3;
 
 import java.util.Scanner;
 

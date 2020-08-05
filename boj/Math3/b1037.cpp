@@ -1,5 +1,5 @@
 // https://www.acmicpc.net/problem/1037
-// Math3 (2) 약수
+// math3 (2) 약수
 // NUMBER 1037
 
 // Math Theorem, https://www.notion.so/sckwon770/Math-Theorem-6a3043ed872b41b88fbbafaddbde2fc2

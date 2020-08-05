@@ -12,5 +12,6 @@ public class b1000 {
         a = scanner.nextInt();
         b = scanner.nextInt();
         System.out.println(a + b);
+        scanner.close();
     }
 }

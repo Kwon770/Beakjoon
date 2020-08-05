@@ -7,7 +7,7 @@
 
 // 이 코드는 java.math.BigInteger 라이브러리를 사용한다.
 
-package boj.Math3;
+package boj.math3;
 
 import java.math.BigInteger;
 import java.util.Scanner;
@@ -27,6 +27,7 @@ public class b2407 {
             BigInteger b = factorial(2, m);
             System.out.println(a.divide(b));
         }
+        scanner.close();
     }
 
     public static BigInteger factorial(int from, int to) {

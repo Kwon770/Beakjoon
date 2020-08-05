@@ -1,5 +1,5 @@
 // https://www.acmicpc.net/problem/2690
-// Math3 (4) 최공 최약
+// math3 (4) 최공 최약
 // NUMBER 2690
 
 // Math Theorem, https://www.notion.so/sckwon770/Math-Theorem-6a3043ed872b41b88fbbafaddbde2fc2
