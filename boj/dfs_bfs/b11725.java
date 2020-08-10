@@ -1,8 +1,9 @@
-// https://www.acmicpc.net/problem/2407
-// NUMBER 2407, 조합
+// https://www.acmicpc.net/problem/11725
+// NUMBER 11725, 트리의 부모 찾기
 
-// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-// Scanner sc = new Scanner(System.in);
+// 노드끼리 연결하여 방향성없는 트리를 만든 후, 이후에 DFS를 통해 트리의 방향성을 만든다
+
+package boj.dfs_bfs;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Main {
+public class b11725 {
     static int n;
     static Node[] nodes;
 
