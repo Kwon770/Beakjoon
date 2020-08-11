@@ -1,9 +1,7 @@
-// https://www.acmicpc.net/problem/2407
-// NUMBER 2407, 조합
+// https://www.acmicpc.net/problem/1260
+// NUMBER 1260, DFS BFS
 
-// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-// Scanner sc = new Scanner(System.in);
-// Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+package boj.dfs_bfs;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +10,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Main {
+public class b1260 {
     static StringBuilder sb = new StringBuilder();
     static boolean[][] edges;
     static boolean[] visited;
