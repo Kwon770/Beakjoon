@@ -1,9 +1,14 @@
-// https://www.acmicpc.net/problem/2407
-// NUMBER 2407, 조합
+// https://www.acmicpc.net/problem/7562
+// NUMBER 7562, 나이트의 이동
 
-// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-// Scanner sc = new Scanner(System.in);
-// Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+// 나이트의 이동은 올곧지 않으므로, 그 움직임의 규칙을 통해 최단거리를 파악하기 힘들다.
+// 따라서 완전 탐색을 통하여 풀어야 하는데, 움직임의 정확한 규칙을 모른채 dfs를 통해 풀기엔 어려움이 있으므로
+// bfs를 통하여 푼다.
+
+// 나이트의 여러가지 움직임을 쉽게 계산하고, 이전 위치를 쉽게 파악하기 위해 움직임 점을 배열로 저장한다.
+// 시작점과 도착점이 같은 경우는, bfs 탐색 알고리즘에서 파악하지 못하는 취약점임으로, 따로 확인해줘야된다.
+
+package boj.dfs_bfs;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +17,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Main {
+public class b7562 {
     static StringBuilder sb = new StringBuilder();
     static int size;
     static int[] iMove = { 1, 2, 2, 1, -1, -2, -2, -1 };
