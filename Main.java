@@ -13,57 +13,47 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Main {
-    static StringBuilder sb = new StringBuilder();
-    static int size;
-    static int[] iMove = { 1, 2, 2, 1, -1, -2, -2, -1 };
-    static int[] jMove = { -2, -1, 1, 2, 2, 1, -1, -2 };
-    static boolean[][] visited;
-    static Queue<int[]> queue;
-    static int[] target;
+    // static StringBuilder sb = new StringBuilder();
+    static int[] cities = new int[1001];
+    static int[][] routesMap = new int[1001][1001];
+    static int n;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int t = Integer.parseInt(br.readLine());
-        for (int k = 0; k < t; k++) {
-            size = Integer.parseInt(br.readLine());
-            int[] temp = parseIntArr(br.readLine().split(" "));
-            int[] start = { temp[0], temp[1], 0, -1 };
-            target = parseIntArr(br.readLine().split(" "));
+        Arrays.fill(cities, Integer.MAX_VALUE);
+        for (int[] routes : routesMap)
+            Arrays.fill(routes, -1);
 
-            if (start[0] == target[0] && start[1] == target[1]) {
-                sb.append(0 + "\n");
-            }
+        n = Integer.parseInt(br.readLine());
+        int m = Integer.parseInt(br.readLine());
 
-            visited = new boolean[300][300];
-            visited[start[0]][start[1]] = true;
-            queue = new LinkedList<>();
-            queue.offer(start);
-            bfs();
+        for (int i = 0; i < m; i++) {
+            int[] route = parseIntArr(br.readLine().split(" "));
+            routesMap[route[0]][route[1]] = route[2];
         }
 
-        System.out.println(sb);
+        int[] course = parseIntArr(br.readLine().split(" "));
+
+        dijkstra(course[0]);
+        System.out.println(cities[course[1]]);
     }
 
-    static void bfs() {
+    static void dijkstra(int start) {
+        Queue<Integer> queue = new LinkedList<>();
+        cities[start] = 0;
+        queue.offer(start);
+
         while (!queue.isEmpty()) {
-            int[] cur = queue.poll();
-            for (int p = 0; p < 8; p++) {
-                if (p == cur[3])
+            int from = queue.poll();
+            for (int to = 1; to <= n; to++) {
+                if (routesMap[from][to] == -1)
                     continue;
 
-                int iNext = cur[0] + iMove[p];
-                int jNext = cur[1] + jMove[p];
+                if (cities[to] > cities[from] + routesMap[from][to])
+                    cities[to] = cities[from] + routesMap[from][to];
 
-                if (iNext == target[0] && jNext == target[1]) {
-                    sb.append(cur[2] + 1 + "\n");
-                    return;
-                }
-
-                if (iNext >= 0 && iNext < size && jNext >= 0 && jNext < size && !visited[iNext][jNext]) {
-                    queue.offer(new int[] { iNext, jNext, cur[2] + 1, p > 3 ? p - 4 : p + 4 });
-                    visited[iNext][jNext] = true;
-                }
+                queue.offer(to);
             }
         }
     }
