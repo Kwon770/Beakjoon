@@ -8,57 +8,77 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.PriorityQueue;
 
 public class Main {
-    // static StringBuilder sb = new StringBuilder();
-    static int[] cities = new int[1001];
-    static int[][] routesMap = new int[1001][1001];
+    static ArrayList<Route> routes[] = new ArrayList[1001];
+    static int[] dist = new int[1001];
     static int n;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        Arrays.fill(cities, Integer.MAX_VALUE);
-        for (int[] routes : routesMap)
-            Arrays.fill(routes, -1);
-
         n = Integer.parseInt(br.readLine());
         int m = Integer.parseInt(br.readLine());
 
+        Arrays.fill(dist, Integer.MAX_VALUE);
+        for (int i = 1; i <= n; i++)
+            routes[i] = new ArrayList<>();
+
         for (int i = 0; i < m; i++) {
-            int[] route = parseIntArr(br.readLine().split(" "));
-            routesMap[route[0]][route[1]] = route[2];
+            int[] input = parseIntArr(br.readLine().split(" "));
+            routes[input[0]].add(new Route(input[1], input[2]));
         }
 
         int[] course = parseIntArr(br.readLine().split(" "));
 
         dijkstra(course[0]);
-        System.out.println(cities[course[1]]);
+        System.out.println(dist[course[1]]);
     }
 
     static void dijkstra(int start) {
-        Queue<Integer> queue = new LinkedList<>();
-        cities[start] = 0;
-        queue.offer(start);
+        PriorityQueue<Route> queue = new PriorityQueue<>();
+        queue.add(new Route(start, 0));
+        dist[start] = 0;
 
         while (!queue.isEmpty()) {
-            int from = queue.poll();
-            for (int to = 1; to <= n; to++) {
-                if (routesMap[from][to] == -1)
-                    continue;
+            // polled route is the route from itself to itself
+            Route route = queue.poll();
 
-                if (cities[to] > cities[from] + routesMap[from][to])
-                    cities[to] = cities[from] + routesMap[from][to];
+            for (int i = 0; i < routes[route.target].size(); i++) {
+                Route nextRoute = routes[route.target].get(i);
 
-                queue.offer(to);
+                // nextRoute.target: next destination, route.target: current position,
+                // routes[route.target].get(i): the route from current position to destination
+                if (dist[nextRoute.target] > dist[route.target] + routes[route.target].get(i).value) {
+                    dist[nextRoute.target] = dist[route.target] + routes[route.target].get(i).value;
+                    queue.add(new Route(nextRoute.target, dist[nextRoute.target]));
+                }
             }
         }
     }
 
     static int[] parseIntArr(String[] strArr) {
         return Arrays.stream(strArr).mapToInt(Integer::parseInt).toArray();
+    }
+
+    public static class Route implements Comparable<Route> {
+        int target;
+        int value;
+
+        public Route(int tar, int val) {
+            this.target = tar;
+            this.value = val;
+        }
+
+        // ascending order
+        @Override
+        public int compareTo(Route c) {
+            if (this.value < c.value)
+                return 1;
+            return 0;
+        }
     }
 }
