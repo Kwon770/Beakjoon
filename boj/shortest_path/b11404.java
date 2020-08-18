@@ -1,16 +1,15 @@
-// https://www.acmicpc.net/problem/2407
-// NUMBER 2407, 조합
+// https://www.acmicpc.net/problem/11404
+// NUMBER 11404, 플로이드
 
-// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-// Scanner sc = new Scanner(System.in);
-// Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+// 폴리이드 와샬, https://www.notion.so/sckwon770/Floyd-Warshall-2bb6020991a14c509390090f668663d7
+package boj.shortest_path;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Main {
+public class b11404 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
