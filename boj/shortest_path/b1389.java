@@ -1,17 +1,17 @@
-// https://www.acmicpc.net/problem/2407
-// NUMBER 2407, 조합
+// https://www.acmicpc.net/problem/1389
+// NUMBER 1389, 케빈 베이컨의 6단계 법칙
 
-// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-// Scanner sc = new Scanner(System.in);
-// Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-// StringBuilder sb = new StringBuilder();
+// 플로이드 와샬을 응용한 최단거리 찾기 문제.
+// 폴리이드 와샬, https://www.notion.so/sckwon770/Floyd-Warshall-2bb6020991a14c509390090f668663d7
+
+package boj.shortest_path;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Main {
+public class b1389 {
     static final int MAX = 1000;
     static int n;
     static int m;
