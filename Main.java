@@ -15,17 +15,18 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int[] pibo = new int[21];
-        pibo[1] = 1;
-        pibo[2] = 1;
-        pibo[3] = 2;
-
+        long[][] dp = new long[91][2];
+        dp[1][0] = 0;
+        dp[1][1] = 1;
+        dp[2][0] = 1;
+        dp[2][1] = 0;
         int n = Integer.parseInt(br.readLine());
-        for (int i = 4; i <= n; i++) {
-            pibo[i] = pibo[i - 1] + pibo[i - 2];
+        for (int i = 3; i <= n; i++) {
+            dp[i][0] = dp[i - 1][0] + dp[i - 1][1];
+            dp[i][1] = dp[i - 1][0];
         }
 
-        System.out.println(pibo[n]);
+        System.out.println(dp[n][0] + dp[n][1]);
     }
 
     static int[] parseIntArr(String[] strArr) {
