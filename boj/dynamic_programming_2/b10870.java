@@ -1,17 +1,16 @@
-// https://www.acmicpc.net/problem/2407
-// NUMBER 2407, 조합
+// https://www.acmicpc.net/problem/10870
+// NUMBER 10870, 피보나치 수 5
 
-// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-// Scanner sc = new Scanner(System.in);
-// Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-// StringBuilder sb = new StringBuilder();
+// 메모이제이션을 이용한 단순한 dp 문제이다.
+// 피보나치 수의 규칙만 알면 쉽게 풀 수 있다.
+
+package boj.dynamic_programming_2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
-public class Main {
+public class b10870 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -26,9 +25,5 @@ public class Main {
         }
 
         System.out.println(pibo[n]);
-    }
-
-    static int[] parseIntArr(String[] strArr) {
-        return Arrays.stream(strArr).mapToInt(Integer::parseInt).toArray();
     }
 }
