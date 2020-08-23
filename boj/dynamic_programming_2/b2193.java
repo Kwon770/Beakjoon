@@ -34,4 +34,4 @@ public class b2193 {
 
         System.out.println(dp[n][0] + dp[n][1]);
     }
-}1
+}
