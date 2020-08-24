@@ -1,10 +1,10 @@
-// https://www.acmicpc.net/problem/2407
-// NUMBER 2407, 조합
+// https://www.acmicpc.net/problem/10217
+// NUMBER 10217, KCM Travel
 
-// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-// Scanner sc = new Scanner(System.in);
-// Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-// StringBuilder sb = new StringBuilder();
+// 다익스트라와 dp를 통한 길찾기 알고리즘
+// 메모리 초과 상태.
+
+package boj.shortest_path;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class b10217 {
     static class AirPlane implements Comparable<AirPlane> {
         int end;
         int cost;
@@ -134,9 +134,5 @@ public class Main {
             int time = Integer.parseInt(st.nextToken());
             list[start].add(new AirPlane(end, cost, time));
         }
-    }
-
-    static int[] parseIntArr(String input) {
-        return Arrays.stream(input.split(" ")).mapToInt(Integer::parseInt).toArray();
     }
 }
