@@ -1,17 +1,17 @@
-// https://www.acmicpc.net/problem/2407
-// NUMBER 2407, 조합
+// https://www.acmicpc.net/problem/2098
+// NUMBER 2098 외판원 순회
 
-// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-// Scanner sc = new Scanner(System.in);
-// Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-// StringBuilder sb = new StringBuilder();
+// 비트마스크, https://www.notion.so/sckwon770/BitMask-74614f0c0a764ab7ab0a28ab29d53fc7
+// 풀이, https://www.notion.so/sckwon770/2098-5cd32462fe5340fa9a0a21d89cffed8e
+
+package boj.bitmask;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Main {
+public class b2098 {
     static final BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static final int INF = Integer.MAX_VALUE - 100_0000;
     static int n;
