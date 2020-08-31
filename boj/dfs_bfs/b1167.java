@@ -1,17 +1,16 @@
-// https://www.acmicpc.net/problem/2407
-// NUMBER 2407, 조합
+// https://www.acmicpc.net/problem/1167
+// NUMBER 1167, 트리의 지름
 
-// BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-// Scanner sc = new Scanner(System.in);
-// Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-// StringBuilder sb = new StringBuilder();
+// 풀이, https://www.notion.so/sckwon770/1167-20d7d32e71eb43979ddb19b2a7b339e3
+
+package boj.dfs_bfs;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Main {
+public class b1167 {
     static final BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static Node[] node;
     static boolean[] visited;
