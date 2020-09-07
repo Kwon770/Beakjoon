@@ -3,10 +3,7 @@
 
 // Simple Greedy Algorithm
 
-#include <algorithm>
 #include <iostream>
-#include <string>
-#include <vector>
 #define endl "\n"
 using namespace std;
 
