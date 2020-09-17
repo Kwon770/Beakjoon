@@ -1,5 +1,13 @@
-// https://www.acmicpc.net/problem/14003
-// DP and Shortest path reverse tracking(3), 14003 가장 긴 증가하는 부분 수열 5
+// https://www.acmicpc.net/problem/2225
+// DP, 2225 합분해
+
+// N인 정수를 K개 뽑는다는 경우의 수는 K의 개수에 따라 DP로 풀 수 있다.
+// 0인 정수를 K개를 뽑는다면 경우의 수는 1
+// N인 정수를 1개만 뽑는다면 1
+// N인 정수를 2개만 뽑는다면 N + 1
+
+// 이 이상의 K의 경우의 수는 dp[n][k] = dp[n - 0][k - 1] + dp[n - 1][k - 1] + ... + dp[n-n][k - 1];
+// 와 같은 식으로 k - 1 단계의 경우의 식으로 구할 수 있다.
 
 #include <algorithm>
 #include <array>
@@ -22,12 +30,13 @@ int main() {
     cin >> n >> k;
     vector<vector<int>> dp(n + 1, vector<int>(k + 1, 0));
 
+    for (int i = 0; i <= k; i++) {
+        dp[0][i] = 1;
+    }
+
     for (int i = 1; i <= n; i++) {
         dp[i][1] = 1;
         dp[i][2] = i + 1;
-    }
-    for (int i = 0; i <= k; i++) {
-        dp[0][i] = 1;
     }
 
     for (int i = 3; i <= k; i++) {
@@ -45,28 +54,3 @@ int main() {
 
     return 0;
 }
-
-// int main() {
-//     ios::sync_with_stdio(false);
-//     cin.tie(nullptr);
-//     cout.tie(nullptr);
-
-//     vector<vector<int>> dp(31, vector<int>(31, 0));
-//     for (int i = 1; i <= 30; i++) {
-//         dp[1][i] = i;
-//     }
-//     for (int i = 2; i <= 30; i++) {
-//         for (int j = i; j <= 30; j++) {
-//             for (int k = j - 1; k >= i - 1; k--) dp[i][j] += dp[i - 1][k];
-//         }
-//     }
-
-//     int t, n, m;
-//     cin >> t;
-//     for (int i = 0; i < t; i++) {
-//         cin >> n >> m;
-//         cout << dp[n][m] << endl;
-//     }
-
-//     return 0;
-// }
