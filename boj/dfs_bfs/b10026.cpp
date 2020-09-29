@@ -1,5 +1,7 @@
-// https://www.acmicpc.net/problem/14003
-// DP and Shortest path reverse tracking(6), 13913 숨바꼭질4
+// https://www.acmicpc.net/problem/10026
+// dfs, 10026 적록색약
+
+// dfs 를 통해, 범위를 찾고 색깔을 바꾸는 문제이다.
 
 #include <algorithm>
 #include <cmath>
