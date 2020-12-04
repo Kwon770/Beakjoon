@@ -9,17 +9,11 @@
       "projectName": "algorithm_2ddc2748"
     },
     {
-      "name": "clang++ - Build and debug active file",
-      "type": "cppdbg",
-      "request": "launch",
-      "preLaunchTask": "build_clang++",
+      "name": "launch_clang++",
       "program": "${fileDirname}/a.out",
-      "args": [],
-      "stopAtEntry": true,
-      "cwd": "${workspaceFolder}",
-      "environment": [],
-      "externalConsole": true,
-      "MIMode": "lldb"
+      "preLaunchTask": "build_clang++",
+      "args": [], 
+      "request": "launch",
     }
   ]
 }
