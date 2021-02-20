@@ -1,6 +1,5 @@
 // https://www.acmicpc.net/problem/11723
 // NUMBER 11723
-
 #include <algorithm>
 #include <iostream>
 #define endl "\n"
@@ -9,38 +8,44 @@ using namespace std;
 class Set {
     int* arr;
 
-   public:
-    Set() {
+public:
+    Set()
+    {
         arr = new int[20];
         fill(arr, arr + 20, 0);
     }
-    ~Set() {
-        delete arr;
+    ~Set() { delete arr; }
+
+    void add(int i)
+    {
+        if (!arr[i - 1])
+            arr[i - 1] = i;
     }
 
-    void add(int i) {
-        if (!arr[i - 1]) arr[i - 1] = i;
+    void remove(int i)
+    {
+        if (arr[i - 1])
+            arr[i - 1] = 0;
     }
 
-    void remove(int i) {
-        if (arr[i - 1]) arr[i - 1] = 0;
-    }
-
-    void check(int i) {
+    void check(int i)
+    {
         if (arr[i - 1])
             cout << 1 << endl;
         else
             cout << 0 << endl;
     }
 
-    void toggle(int i) {
+    void toggle(int i)
+    {
         if (arr[i - 1])
             arr[i - 1] = 0;
         else
             arr[i - 1] = i;
     }
 
-    void all() {
+    void all()
+    {
         delete arr;
         arr = new int[20];
         for (int i = 0; i < 20; i++) {
@@ -48,14 +53,16 @@ class Set {
         }
     }
 
-    void empty() {
+    void empty()
+    {
         delete arr;
         arr = new int[20];
         fill(arr, arr + 20, 0);
     }
 };
 
-int main() {
+int main()
+{
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);

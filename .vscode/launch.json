@@ -2,13 +2,6 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "java",
-      "name": "CodeLens (Launch) - Main",
-      "request": "launch",
-      "mainClass": "Main",
-      "projectName": "algorithm_2ddc2748"
-    },
-    {
       "name": "launch_clang++",
       "program": "${fileDirname}/a.out",
       "preLaunchTask": "build_clang++",

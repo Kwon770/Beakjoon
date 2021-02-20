@@ -1,34 +1,40 @@
-def tuple_sum(tup):
-    if isinstance(tup, int):
-        return tup
-    else:
-        accum = 0
-        for element in tup:
-            accum += tuple_sum(element)
-    return accum
+# Memory : 29076 KB
+# Time : 88 ms
 
+s = input()
+p = input()
 
-def product_set(set1, set2):
-    res = set()
-    for i in set1:
-        for j in set2:
-            res = res | {(i, j)}
-    return res
+count = 0
+i = 0
+while i < len(p):
+    count += 1
 
+    result = 0
+    maxLength = 0
+    index = 0
+    while True:
+        result = s.find(p[i], result)
+        if result == -1:
+            break
 
-case = {1, 2, 3, 4, 5, 6}
-case2 = product_set(case, case)
-case3 = product_set(case, case2)
+        tempLength = 0
+        tempSIndex = result
+        tempPIndex = i
+        while s[tempSIndex] == p[tempPIndex]:
+            tempLength += 1
 
-case_sum = [tuple_sum(tup) for tup in case3]
+            if tempSIndex + 1 == len(s) or tempPIndex + 1 == len(p):
+                break
 
+            tempSIndex += 1
+            tempPIndex += 1
 
-def prob_over(x):
-    ans = 0
-    for j in range(0, len(case_sum)):
-        if case_sum[j] >= x:
-            ans += 1
-    return ans / 216 * 100
+        if maxLength < tempLength:
+            index = tempSIndex
+            maxLength = tempLength
 
+        result += tempLength
 
-print(prob_over(4))
+    i += maxLength
+
+print(count)

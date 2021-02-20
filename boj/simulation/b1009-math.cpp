@@ -8,28 +8,27 @@
 #define endl "\n"
 using namespace std;
 
-vector<vector<int> > loop = {{1}, {2, 4, 8, 6}, {3, 9, 7, 1}, {4, 6}, {5}, {6}, {7, 9, 3, 1},
-				{8, 4, 2, 6}, {9, 1}, {10}};
+vector<vector<int> > loop = {{1}, {2, 4, 8, 6}, {3, 9, 7, 1}, {4, 6}, {5}, {6}, {7, 9, 3, 1}, {8, 4, 2, 6}, {9, 1}, {10}};
 
 int main() {
-	ios::sync_with_stdio(false);
-	cin.tie(nullptr);
-	cout.tie(nullptr);
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
 
-	int t, a, b;
+    int t, a, b;
 
-	cin >> t;
-	for (int i = 0; i < t; i++) {
-		cin >> a >> b;
-		a = (a - 1) % 10;
+    cin >> t;
+    for (int i = 0; i < t; i++) {
+        cin >> a >> b;
+        a = (a - 1) % 10;
 
-		int size = loop[a].size();
-		if (size  == 1) {
-			cout << loop[a][0] << endl;
-		} else {
-			cout << loop[a][b % size == 0 ? size - 1 : b % size - 1] << endl;
-		}
-	}	
+        int size = loop[a].size();
+        if (size == 1) {
+            cout << loop[a][0] << endl;
+        } else {
+            cout << loop[a][b % size == 0 ? size - 1 : b % size - 1] << endl;
+        }
+    }
 
-	return 0;
+    return 0;
 }
