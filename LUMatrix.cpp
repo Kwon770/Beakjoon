@@ -1,3 +1,5 @@
+// Source Code Link :
+// https://github.com/Kwon770/Algorithm/blob/master/LUMatrix.cpp
 #include <algorithm>
 #include <iomanip>
 #include <iostream>
@@ -69,10 +71,10 @@ int main() {
   cin.tie(NULL);
   cout.tie(NULL);
 
-  int n;
+  int len;
   cout << "Input size of matrix : ";
-  cin >> n;
-  vector<vector<double>> A(n, vector<double>(n));
+  cin >> len;
+  vector<vector<double>> A(len, vector<double>(len));
 
   cout << endl;
   cout << "Input matrix with blanks and line break" << endl;
@@ -83,13 +85,11 @@ int main() {
   cout << ">> " << endl;
   cout << endl;
 
-  for (int i = 0; i < n; i++) {
-    for (int j = 0; j < n; j++) {
+  for (int i = 0; i < len; i++) {
+    for (int j = 0; j < len; j++) {
       cin >> A[i][j];
     }
   }
-
-  int len = A.size();
 
   // Make unit matrix
   I.resize(len, vector<double>(len, 0));
