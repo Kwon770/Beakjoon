@@ -1,14 +1,12 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 #define endl "\n"
 using namespace std;
 
 #define ln(x) (int)(x).length()
 #define sz(x) (int)(x).size()
-#define F first
-#define S second
+#define ll long long
 
-int main() {
+int main(void) {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
