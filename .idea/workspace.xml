@@ -43,7 +43,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
@@ -71,11 +71,19 @@
       <workItem from="1627905722072" duration="1234000" />
       <workItem from="1627965649204" duration="624000" />
       <workItem from="1627981509299" duration="2382000" />
-      <workItem from="1628093463428" duration="3296000" />
+      <workItem from="1628093463428" duration="3361000" />
+      <workItem from="1628171434519" duration="6250000" />
+      <workItem from="1628304188350" duration="3862000" />
+      <workItem from="1628345519309" duration="4745000" />
+      <workItem from="1628865561812" duration="4201000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
