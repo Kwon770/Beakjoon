@@ -30,6 +30,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="NEW_TOOLWINDOW_STRIPE_DEFAULTS" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
@@ -43,7 +44,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
@@ -75,7 +76,10 @@
       <workItem from="1628171434519" duration="6250000" />
       <workItem from="1628304188350" duration="3862000" />
       <workItem from="1628345519309" duration="4745000" />
-      <workItem from="1628865561812" duration="4201000" />
+      <workItem from="1628865561812" duration="4422000" />
+      <workItem from="1628903900832" duration="4398000" />
+      <workItem from="1628913138060" duration="613000" />
+      <workItem from="1628913782602" duration="579000" />
     </task>
     <servers />
   </component>

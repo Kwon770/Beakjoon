@@ -1,8 +1,10 @@
-// https://www.acmicpc.net/problem/21869
-// 21869 Maximub bishop
+// https://www.acmicpc.net/problem/2641
+// 2641 다각형 그리기
 // Memory : 2156 KB , Time : 0 ms
 //
-// ...
+// 문제의 의도를 파악해야 풀 수 있는 문제다.
+// 굳이 다각형의 모양을 숫자로 주었으므로, 이 숫자들을 이용하여 다른 방향의 도형도 파악해야한다.
+// 패턴이 주어지는 문제의 경우, 그 패턴 자체로 풀 수 있는 문제가 많다고 함.
 
 #include <bits/stdc++.h>
 
@@ -23,7 +25,7 @@ bool compare(list<int>& standard, list<int> comparison) {
         isSame = true;
         int rotation = standard.front() - comparison.front();
         for (auto standardIter = standard.begin(), comparisonIter = comparison.begin();
-             standardIter != standard.end(); standardIter++, comparisonIter++) {
+        standardIter != standard.end(); standardIter++, comparisonIter++) {
             if (*standardIter != *comparisonIter + rotation) {
                 isSame = false;
                 break;
