@@ -1,5 +1,5 @@
 // https://www.acmicpc.net/problem/16918
-// 16918
+// 16918 봄버맨
 // Memory : 2288 KB , Time : 36 ms
 //
 // 어려운 이론이 필요하기보다는 구현할 것이 많은 문제였다.
