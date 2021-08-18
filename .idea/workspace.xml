@@ -44,7 +44,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
@@ -84,7 +84,11 @@
       <workItem from="1628922327246" duration="2263000" />
       <workItem from="1629015991468" duration="4483000" />
       <workItem from="1629020907381" duration="160000" />
-      <workItem from="1629211799512" duration="1983000" />
+      <workItem from="1629211799512" duration="2767000" />
+      <workItem from="1629261973158" duration="2312000" />
+      <workItem from="1629265179707" duration="44000" />
+      <workItem from="1629265251951" duration="118000" />
+      <workItem from="1629265396334" duration="7358000" />
     </task>
     <servers />
   </component>
