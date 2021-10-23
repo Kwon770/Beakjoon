@@ -1,8 +1,6 @@
-// https://www.acmicpc.net/problem/11055
-// 11055 가장 큰 증가 부분 수열
-// Memory : 2020 KB , Time : 0 ms
+// https://programmers.co.kr/learn/courses/30/lessons/86491?language=cpp
+// 8주차_최소직사각형
 //
-// ..
 
 #include <bits/stdc++.h>
 
@@ -26,11 +24,11 @@ int solution(vector<vector<int>> sizes) {
 }
 
 int main(void) {
-  ios::sync_with_stdio(false);
-  cin.tie(nullptr);
-  cout.tie(nullptr);
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
 
-  vector<vector<int>> a = {{1,2}, {3,4}};
-  cout << solution(a);
-  return 0;
+    vector<vector<int>> a = {{1,2}, {3,4}};
+    cout << solution(a);
+    return 0;
 }
