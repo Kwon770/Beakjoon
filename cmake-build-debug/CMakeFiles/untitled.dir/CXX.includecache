@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/chan/code/cpp/algorithm/main.cpp
-bits/stdc++.h
+/Users/chan/code/cpp/algorithm-cpp/main.cpp
+iostream
+-
+vector
 -
 
