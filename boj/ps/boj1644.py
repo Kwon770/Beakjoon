@@ -23,18 +23,6 @@ n = int(input())
 primes = prime_list(n)
 cnt = 0
 for i in range(len(primes)):
-    sum = 0
-    idx = i
-    while sum < n and idx < len(primes):
-        sum += primes[idx]
-        idx += 1
-        if sum == n:
-
-            cnt += 1
-            break
-
-
-for i in range(len(primes)):
     if primes[i] == n:
         cnt += 1
         continue
