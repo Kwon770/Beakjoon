@@ -9,3 +9,7 @@ B
 boj/ps/boj1406.cpp,d/a/dadf525bbcce3e721c443359ca3b132e4289507b
 F
 boj/string/boj11721.py,7/7/7714d7f43b1a4f9f1cd8cf5c69ba35826b334044
+A
+boj/ps/boj1644.py,0/7/076c7bf803608728def2f6c50182546cb330776f
+L
+boj/ps/boj1644_twoPointer.py,5/5/558c24a8e76d25a8ff58f50d4cc3e76883e55432
